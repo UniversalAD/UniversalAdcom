@@ -1,0 +1,28 @@
+﻿@import 'Typography.scss';
+
+.btn {
+    width: 100%;
+    display: block;
+    font-size: 1.2vw;
+    color: #000;
+    max-width: 140px;
+    font-family: $raleway-semi-bold;
+
+    @media (max-width: 1300px) {
+        font-size: 1.1vw;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 2.5vw;
+    }
+
+    &.red {
+        background-color: $red;
+        color: $white;
+    }
+
+    &.white {
+        background-color: $white;
+        color: $red;
+    }
+}

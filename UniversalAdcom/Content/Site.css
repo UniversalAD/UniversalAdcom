@@ -1,0 +1,240 @@
+﻿@font-face {
+  font-family: 'ralewayregular';
+  src: url("Fonts/raleway-regular-webfont.woff2") format("woff2"), url("Fonts/raleway-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaybold';
+  src: url("Fonts/raleway-bold-webfont.woff2") format("woff2"), url("Fonts/raleway-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaysemibold';
+  src: url("Fonts/raleway-semibold-webfont.woff2") format("woff2"), url("Fonts/raleway-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.center-block {
+  margin: 0 auto;
+  display: block;
+  float: none; }
+
+@media (max-width: 767px) {
+  .hide-for-small {
+    display: none; } }
+
+@media (min-width: 767px) {
+  .show-for-small {
+    display: none; } }
+
+.float-right {
+  float: right; }
+
+.float-left {
+  float: left; }
+
+.relative {
+  position: relative; }
+
+h1, h2, h3, h4, h5 {
+  font-family: "ralewaybold"; }
+
+@media (max-width: 480px) {
+  .row {
+    margin-left: 0;
+    margin-right: 0; } }
+
+.nav {
+  background-color: transparent;
+  border: none;
+  margin-top: 15px; }
+  .nav .nav-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 65px;
+    background-color: #273866;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: none;
+    z-index: 10;
+    outline: none; }
+    .nav .nav-icon span {
+      top: 0;
+      font-size: 50px;
+      color: #ed1c24; }
+    @media (max-width: 767px) {
+      .nav .nav-icon {
+        display: block; } }
+  @media (min-width: 768px) {
+    .nav .slide-container {
+      position: relative; } }
+  @media (max-width: 767px) {
+    .nav .slide-container {
+      position: absolute;
+      left: -9999px;
+      width: 100%;
+      height: 100%;
+      display: block;
+      padding-bottom: 100%;
+      z-index: 5;
+      background-color: #fff; } }
+  .nav .slide-container ul {
+    list-style-type: none; }
+    .nav .slide-container ul li {
+      font-size: 18px;
+      padding: 10px;
+      margin: 0 5px; }
+      @media (max-width: 768px) {
+        .nav .slide-container ul li {
+          margin: 0; } }
+      .nav .slide-container ul li a {
+        padding: 0;
+        display: block;
+        color: #000; }
+        .nav .slide-container ul li a:hover, .nav .slide-container ul li a:focus {
+          color: #000 !important;
+          background-color: transparent !important; }
+        .nav .slide-container ul li a:visited {
+          color: #000; }
+
+@media (max-width: 767px) {
+  .navbar-header a img {
+    padding-right: 25px; } }
+
+@font-face {
+  font-family: 'ralewayregular';
+  src: url("Fonts/raleway-regular-webfont.woff2") format("woff2"), url("Fonts/raleway-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaybold';
+  src: url("Fonts/raleway-bold-webfont.woff2") format("woff2"), url("Fonts/raleway-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaysemibold';
+  src: url("Fonts/raleway-semibold-webfont.woff2") format("woff2"), url("Fonts/raleway-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.headerVideo .col-lg-9 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, 0); }
+  .headerVideo .col-lg-9 .col-lg-2 {
+    min-width: 235px; }
+  .headerVideo .col-lg-9 .easiest {
+    padding-top: 8px; }
+
+.headerVideo .col-md-3 {
+  border-right: 5px solid #fff; }
+  @media (max-width: 767px) {
+    .headerVideo .col-md-3 {
+      border: 0; } }
+
+@media (max-width: 767px) {
+  .headerVideo .col-xs-10 {
+    float: none;
+    margin: 0 auto; } }
+
+.headerVideo h1 {
+  font-size: 5vw;
+  color: #fff; }
+  @media (max-width: 767px) {
+    .headerVideo h1 {
+      font-size: 7vw; } }
+
+.headerVideo h2 {
+  color: #fff; }
+  @media (max-width: 767px) {
+    .headerVideo h2 {
+      text-align: center;
+      font-size: 4vw; } }
+  @media (max-width: 480px) {
+    .headerVideo h2 {
+      font-size: 5vw; } }
+  .headerVideo h2 span {
+    color: #FF0000; }
+
+.headerVideo h5 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #fff; }
+
+.headerVideo img {
+  min-height: 300px;
+  max-height: 600px;
+  height: 100%; }
+
+.headerVideo ul {
+  list-style-type: none;
+  margin-top: -190px; }
+  .headerVideo ul li {
+    margin: 0;
+    margin-top: -55px;
+    font-size: 50px; }
+    .headerVideo ul li .chevron::before {
+      border-style: solid;
+      border-width: 0.15em 0.15em 0 0;
+      content: '';
+      display: inline-block;
+      height: 1.25em;
+      position: relative;
+      transform: rotate(135deg);
+      vertical-align: top;
+      width: 1.25em;
+      border-radius: 5px;
+      border-color: #fff; }
+
+@font-face {
+  font-family: 'ralewayregular';
+  src: url("Fonts/raleway-regular-webfont.woff2") format("woff2"), url("Fonts/raleway-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaybold';
+  src: url("Fonts/raleway-bold-webfont.woff2") format("woff2"), url("Fonts/raleway-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaysemibold';
+  src: url("Fonts/raleway-semibold-webfont.woff2") format("woff2"), url("Fonts/raleway-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.btn {
+  width: 100%;
+  display: block;
+  font-size: 1.2vw;
+  color: #000;
+  max-width: 140px;
+  font-family: "ralewaysemibold"; }
+  @media (max-width: 1300px) {
+    .btn {
+      font-size: 1.1vw; } }
+  @media (max-width: 767px) {
+    .btn {
+      font-size: 2.5vw; } }
+  .btn.red {
+    background-color: #FF0000;
+    color: #fff; }
+  .btn.white {
+    background-color: #fff;
+    color: #FF0000; }
+
+body {
+  padding-top: 50px;
+  padding-bottom: 20px; }
+
+.body-content {
+  margin-top: 50px; }
+

@@ -1,0 +1,97 @@
+﻿@import 'Typography.scss';
+
+.headerVideo {
+    .col-lg-9 {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        .col-lg-2 {
+            min-width: 235px;
+        }
+
+        .easiest {
+            padding-top: 8px;
+        }
+    }
+
+    .col-md-3 {
+        border-right: 5px solid $white;
+
+        @media (max-width: 767px) {
+            border: 0;
+        }
+    }
+
+    .col-xs-10 {
+        @media (max-width: 767px) {
+            float: none;
+            margin: 0 auto;
+        }
+    }
+
+    h1 {
+        font-size: 5vw;
+        color: $white;
+
+        @media (max-width: 767px) {
+            font-size: 7vw;
+        }
+    }
+
+    h2 {
+        color: $white;
+
+        @media (max-width: 767px) {
+            text-align: center;
+            font-size: 4vw;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 5vw;
+        }
+
+        span {
+            color: $red;
+        }
+    }
+
+    h5 {
+        font-size: 19px;
+        font-weight: 700;
+        color: $white;
+    }
+
+    img {
+        min-height: 300px;
+        max-height: 600px;
+        height: 100%;
+    }
+
+    ul {
+        list-style-type: none;
+        margin-top: -190px;
+
+        li {
+            margin: 0;
+            margin-top: -55px;
+            font-size: 50px;
+
+
+            .chevron::before {
+                border-style: solid;
+                border-width: 0.15em 0.15em 0 0;
+                content: '';
+                display: inline-block;
+                height: 1.25em;
+                position: relative;
+                transform: rotate(135deg);
+                vertical-align: top;
+                width: 1.25em;
+                border-radius: 5px;
+                border-color: $white;
+            }      
+        }
+    }
+}
