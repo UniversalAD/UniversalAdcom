@@ -1,1 +1,43 @@
-﻿
+﻿@import 'Typography.scss';
+
+.center-block {
+    margin: 0 auto;
+    display: block;
+    float: none;
+}
+
+.hide-for-small {
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.show-for-small {
+    @media (min-width: 767px) {
+        display: none;
+    }
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.relative {
+    position: relative;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $raleway-bold;
+}
+
+.row {
+    @media (max-width: 480px) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
