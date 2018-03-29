@@ -1,1 +1,39 @@
 ﻿
+
+
+
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('Fonts/raleway-regular-webfont.woff2') format('woff2'),
+         url('Fonts/raleway-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('Fonts/raleway-bold-webfont.woff2') format('woff2'),
+         url('Fonts/raleway-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaysemibold';
+    src: url('Fonts/raleway-semibold-webfont.woff2') format('woff2'), 
+         url('Fonts/raleway-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$raleway-regular: 'ralewayregular';
+$raleway-bold: 'ralewaybold';
+$raleway-semi-bold: 'ralewaysemibold';
+//colors
+$white: #fff;
+$red: #FF0000;
+$black: #000;
+//
+
+
+
