@@ -1,0 +1,113 @@
+﻿@import 'Typography.scss';
+
+.full-service {
+
+    h3 {
+        font-size: 4vw;
+        color: $black;
+
+        @media (max-width: 767px) {
+            font-size: 6.5vw;
+        }     
+
+        span {
+            color: $red;
+        }
+    }
+
+    h4 {
+        font-size: 1.7em;
+    }   
+
+    p {
+        font-size: 1.2em;
+        height: 100%;
+
+        span {
+            color: $red;
+        }
+    }
+    
+    .blocks {
+        height: 300px;
+    }
+
+    .bw {      
+
+        .btn {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
+
+.knowledge {
+    background-image: url('/Content/Images/Home/Backgrounds/IMG_2594.jpg');
+    background-size: cover;
+    background-position: center;
+
+    h3 {
+        color: $white;
+        font-size: 52px;
+        padding: 140px 0;
+        text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+
+        span {
+            color: $red;
+        }
+    }
+}
+
+.partner {
+
+    h3 {
+        font-size: 4vw;
+
+        @media (max-width: 767px) {
+            font-size: 6.4vw;
+        }
+
+        span {
+            color: $red;
+        }
+    }
+
+    .circle {
+        position: relative;
+        background-color: $red;
+        color: $white;
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+
+        @media (max-width: 767px) {
+            margin-top: 15px;
+        }
+
+        .circle-block {
+            display: none;
+            padding-top: 45px;
+        }
+
+        h5 {
+            font-size: 4em;
+        }
+
+        p {
+            font-size: 1.7em;
+        }
+    }
+}
+
+.dotted-line {
+    display: block;
+    border-top: 5px solid $red;
+    width: 70%;
+}
+
+.clients {
+    h5 {
+        color: $red;
+        font-size: 2.8em;;
+    }
+}

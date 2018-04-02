@@ -1,0 +1,30 @@
+﻿@import 'Typography.scss';
+
+.our-process {
+
+    .light-blk-box {
+        margin-top: -45%;
+        background-color: rgba(0,0,0,.7);
+        border-radius: 15px;
+        width: 100%;
+        padding: 50px;
+
+        h2 {
+            color: $white;
+            font-size: 4.5em;
+        }
+
+        p {
+            color: $white;
+            font-size: 18px;
+
+            span {
+                color: $red;
+            }
+        }
+
+        ul {
+            margin-top: 55px;
+        }
+    }
+}

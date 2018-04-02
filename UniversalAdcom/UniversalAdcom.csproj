@@ -204,6 +204,37 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Home\Ace.png" />
+    <Content Include="Content\Images\Home\Allstate-Ins.png" />
+    <Content Include="Content\Images\Home\American-Legion.png" />
+    <Content Include="Content\Images\Home\American-Red-Cross.png" />
+    <Content Include="Content\Images\Home\Americas-Best-Value.png" />
+    <Content Include="Content\Images\Home\Backgrounds\IMG_2594.jpg" />
+    <Content Include="Content\Images\Home\Century21.png" />
+    <Content Include="Content\Images\Home\Chilis.png" />
+    <Content Include="Content\Images\Home\Connectivity-e1510328672837.png" />
+    <Content Include="Content\Images\Home\Creativity-e1510328661658.png" />
+    <Content Include="Content\Images\Home\Culligan.png" />
+    <Content Include="Content\Images\Home\Dignity.png" />
+    <Content Include="Content\Images\Home\Dominos.png" />
+    <Content Include="Content\Images\Home\DQ.png" />
+    <Content Include="Content\Images\Home\H.png" />
+    <Content Include="Content\Images\Home\Habitat.png" />
+    <Content Include="Content\Images\Home\Hooters.png" />
+    <Content Include="Content\Images\Home\Hyatt.png" />
+    <Content Include="Content\Images\Home\KW.png" />
+    <Content Include="Content\Images\Home\Little-Caesars.png" />
+    <Content Include="Content\Images\Home\Longhorn.png" />
+    <Content Include="Content\Images\Home\Mary-Kay.png" />
+    <Content Include="Content\Images\Home\Papa-Johns.png" />
+    <Content Include="Content\Images\Home\Perkins.png" />
+    <Content Include="Content\Images\Home\Pizza-hut.png" />
+    <Content Include="Content\Images\Home\Remax.png" />
+    <Content Include="Content\Images\Home\ROI-e1510328648493.png" />
+    <Content Include="Content\Images\Home\Sonic.png" />
+    <Content Include="Content\Images\Home\State-Farm.png" />
+    <Content Include="Content\Images\Home\Subway.png" />
+    <Content Include="Content\Images\Home\Waffle-house.png" />
     <Content Include="Content\Images\Logo.png" />
     <Content Include="Content\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
@@ -277,7 +308,10 @@
     <Content Include="Content\Fonts\raleway-regular-webfont.woff2" />
     <Content Include="Content\Fonts\raleway-semibold-webfont.woff" />
     <Content Include="Content\Fonts\raleway-semibold-webfont.woff2" />
+    <Content Include="Content\scss\Home.scss" />
+    <Content Include="Content\scss\HowItWorks.scss" />
     <None Include="Scripts\jquery-1.12.4.intellisense.js" />
+    <Content Include="Scripts\Home.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />
     <Content Include="Scripts\jquery-1.12.4.min.js" />
     <Content Include="Scripts\jquery-1.12.4.min.map" />
@@ -328,6 +362,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_VideoHeader.cshtml" />
+    <Content Include="Views\Home\HowItWorks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
