@@ -26,5 +26,10 @@
                 });
             }
         });
+
+        if ($(window).width() < 767) {
+            $(".dropdown-menu").hide();
+            $(".small-nav").show();
+        };
     });
 
