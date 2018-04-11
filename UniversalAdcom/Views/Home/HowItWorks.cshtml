@@ -11,7 +11,7 @@
                 <div class="col-xs-10 col-sm-6 col-md-6 col-lg-5 center-block">
                     <h2 class="text-center">Our Process</h2>
                     <p class="text-center">Most likely we've alre<span>ad</span>y spoken to each other over the phone and you're here to find out some more information about us.</p>
-                    <p class="text-center">That has the first step in out process.</p>
+                    <p class="text-center">That was the first step in out process.</p>
                 </div>
                 <div class="col-lg-3 center-block">
                     <ul>
@@ -23,7 +23,92 @@
                         </li>
                     </ul>
                 </div>
-            </div>           
+            </div>
         </div>
     </div>
 </section>
+
+<section class="circles" id="circles">
+    <div class="row">
+        <div class="col-sm-12 col-md-10 col-lg-9 center-block relative">
+            <div class="circle center-block m-top-25">
+                <h5 class="text-center print">Print</h5>
+            </div>
+            <div class="circle creative">
+                <h5 class="text-center creative-heading">Creative</h5>
+            </div>
+            <p class="text-center para-1">You know what's sucky about other print companies? They force you to get the design process started by yourself before giving you any help. We like to do things differently; we design your ad for you FIRST then you tell us what to fix, because... honestly, you're too busy to worry about design work. Let us do what we do best so you can get back to doing what you do best... Running your business.</p>
+            <div class="circle distribution">
+                <h5 class="text-center distribution-heading">Distribution</h5>
+            </div>
+            <div class="circle retention">
+                <h5 class="text-center retention-heading">Retention</h5>
+            </div>
+            <a class="text-center center-block" data-toggle="modal" data-target="#freeartworkmodal">Create My Free Artwork Now ></a>
+            <div class="circle awareness">
+                <h5 class="text-center awareness-heading">Awareness</h5>
+            </div>
+            <div class="circle longevity center-block">
+                <h5 class="text-center longevity-heading">Longevity</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="focus-on m-top-25 container-fluid" id="circles">
+    <div class="row">
+        <div class="col-lg-9 center-block">
+            <h3 class="text-center">Some Things We Focus On:</h3>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h4>CAMPAIGN STRATEGY & PLANING</h4>
+                <div class="border-bottom"></div>
+                <p>Our formula for building brands is one that we've been perfecting for over 40 years now.</p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h4>ARTWORK & DESIGN</h4>
+                <div class="border-bottom"></div>
+                <p>With graphic teams on-site, we do all the detail work for free, make sure your logo, brand and artwork are both beautiful and eye-popping.</p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h4>DISTRIBUTION & ENGAGEMENT</h4>
+                <div class="border-bottom"></div>
+                <p>We've partnered with distributors via signed agreements and they make sure to get your campaign into the right hands of their most active and loyal customers.</p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h4>PRINT & PRODUCTION</h4>
+                <div class="border-bottom"></div>
+                <p>We're a 100% in-house operation. We handle everything from our 85,000 sq.ft. facility in Arlington, TX.</p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h4>RETENTION & RECONITION</h4>
+                <div class="border-bottom"></div>
+                <p>Customers tend to do more business with companies that they've received a promotional item from.</p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h4>SHIPPING & TRACKING</h4>
+                <div class="border-bottom"></div>
+                <p>Not only do we have the capabilities for you to track your orders, but also to track the amount of customers you bring in through our programs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+@Html.Partial("_FreeArtworkModal")
+@Html.Partial("_SuccessModal")
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/Howitworks.js")
+
+    @if (ViewBag.Message != null)
+    {
+        <script>
+            $(document).ready(function () {
+
+                console.log("Success");
+                $('#successModal').modal('show');
+            });           
+        </script>
+
+        Session["Message"] = null;
+    }
+}
