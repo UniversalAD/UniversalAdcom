@@ -294,6 +294,7 @@
     <Content Include="Scripts\EmailValidation.js" />
     <Content Include="Scripts\Home.js" />
     <Content Include="Scripts\Howitworks.js" />
+    <Content Include="Content\scss\About.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

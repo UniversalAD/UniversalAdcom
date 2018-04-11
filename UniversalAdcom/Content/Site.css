@@ -113,9 +113,12 @@ label.error {
       left: -9999px;
       width: 100%;
       display: block;
-      padding-bottom: 100%;
       z-index: 5;
       background-color: #fff; } }
+  @media (max-width: 480px) {
+    .nav .slide-container {
+      overflow: scroll;
+      max-height: 630px; } }
   .nav .slide-container ul {
     list-style-type: none; }
     @media (max-width: 767px) {
@@ -141,11 +144,19 @@ label.error {
           color: #000 !important;
           background-color: transparent !important; }
         .nav .slide-container ul li a:visited {
-          color: #000; }
+          color: #000;
+          background-color: transparent; }
 
 @media (max-width: 767px) {
   .navbar-header a img {
     padding-right: 25px; } }
+
+.dropdown:hover .dropdown-menu {
+  display: block; }
+
+@media (max-width: 767px) {
+  .dropdown-menu {
+    display: block; } }
 
 @font-face {
   font-family: 'ralewayregular';

@@ -21,16 +21,18 @@
                         <ul class="navbar-nav">
                             <li>@Html.ActionLink("How it Works", "HowItWorks", "Home")</li>
                             <li class="dropdown">
-                            <a class="dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Programs
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <li>@Html.ActionLink("County", "County", "Products")</li>
-                                <li>@Html.ActionLink("Pizza", "Pizza", "Products")</li>
-                                <li>@Html.ActionLink("Schools", "Schools", "Products")</li>
-                                <li>@Html.ActionLink("Entertainment", "Entertainment", "Products")</li>
-                            </ul>
+                                @Html.ActionLink("Programs", "About", "Home", new { @class = "dropdown-toggle" })
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li>@Html.ActionLink("County", "County", "Products")</li>
+                                    <li>@Html.ActionLink("Pizza", "Pizza", "Products")</li>
+                                    <li>@Html.ActionLink("Schools", "Schools", "Products")</li>
+                                    <li>@Html.ActionLink("Entertainment", "Entertainment", "Products")</li>
+                                </ul>
                             </li>
+                            <li class="show-for-small">@Html.ActionLink("County", "County", "Products")</li>
+                            <li class="show-for-small">@Html.ActionLink("Pizza", "Pizza", "Products")</li>
+                            <li class="show-for-small">@Html.ActionLink("Schools", "Schools", "Products")</li>
+                            <li class="show-for-small">@Html.ActionLink("Entertainment", "Entertainment", "Products")</li>
                             <li>@Html.ActionLink("Products", "Products", "Home")</li>
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                             <li>@Html.ActionLink("Media", "Media", "Home")</li>
