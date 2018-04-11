@@ -3,11 +3,15 @@
 .our-process {
 
     .light-blk-box {
-        margin-top: -45%;
+        margin-top: -47%;
         background-color: rgba(0,0,0,.7);
         border-radius: 15px;
         width: 100%;
         padding: 50px;
+
+        @media (max-width: 480px) {
+            padding: 0;
+        }
 
         h2 {
             color: $white;
@@ -26,5 +30,132 @@
         ul {
             margin-top: 55px;
         }
+    }
+
+    .chevron {
+        &:before {
+            border-color: $red;
+        }
+    }
+}
+
+.circles {
+    .circle {
+        position: relative;
+        background-color: $red;
+        border-radius: 50%;
+        height: 220px;
+        width: 220px;
+
+        @media (max-width: 480px) {
+            position: relative !important;
+            margin: 15px auto;
+            display: block;
+            left: auto !important;
+            right: auto !important;
+        }
+
+        &.distribution {
+            position: absolute;
+            right: 2%;
+            top: 25%;
+
+            @media (max-width: 767px) {
+                top: 21.9%;
+            }
+        }
+
+        &.awareness {
+            position: absolute;
+            right: 2%;
+            top: 51.2%;
+
+            @media (max-width: 767px) {
+                top: 56.6%;
+            }
+        }
+
+        &.retention {
+            margin-top: 15px;
+        }
+
+        h5 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 2.5em;
+            color: $white;
+            display: none;
+        }       
+    }
+
+    p {
+        position: absolute;
+        left: 50%;
+        width: 47%;
+        top: 29%;
+        transform: translate(-50%, 0);
+        display: none;
+
+        @media (min-width: 1342px) {
+            max-width: 25vw;
+        }
+
+        @media (max-width: 900px) {
+            width: 41%;
+        }
+
+        @media (max-width: 767px) {
+            position: relative;
+            width: 100%;
+            padding: 25px 0;
+        }
+
+        @media (max-width: 480px) {
+            padding: 25px 0 35px 0;
+        }
+    }
+
+    a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        display: none;
+        color: #000;
+
+        @media (max-width: 767px) {
+            top: 55%;
+        }
+
+        @media (max-width: 480px) {
+            top: 40%;
+        }
+    }
+}
+
+.focus-on {
+    background-color: $red;
+    padding-top: 25px;
+    color: $white;
+
+    h3 {
+        font-size: 3em;
+    }
+
+    .border-bottom {
+        background-color: $white;
+        width: 30%;
+        height: 2px;
+        margin: 15px 0;
+        display: none;
+    }
+}
+
+
+.col-lg-9 {
+    @media (min-width: 1342px) {
+        max-width: 1024px;
     }
 }
