@@ -106,9 +106,13 @@
 
                 console.log("Success");
                 $('#successModal').modal('show');
-            });           
+            });
         </script>
 
         Session["Message"] = null;
     }
+
+    <script>
+        $("#emailContact").validate();  
+    </script>
 }

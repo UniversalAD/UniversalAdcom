@@ -79,6 +79,9 @@ ul {
       border-radius: 5px;
       border-color: #fff; }
 
+label.error {
+  color: #FF0000; }
+
 .nav {
   background-color: #fff;
   border: none; }
@@ -444,7 +447,8 @@ ul {
   left: 50%;
   transform: translate(-50%, 0);
   display: none;
-  color: #000; }
+  color: #000;
+  cursor: pointer; }
   @media (max-width: 767px) {
     .circles a {
       top: 55%; } }
