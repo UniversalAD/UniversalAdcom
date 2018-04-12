@@ -30,8 +30,7 @@ namespace UniversalAdcom.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
+            ViewBag.Message = Session["Message"];
             return View();
         }
 

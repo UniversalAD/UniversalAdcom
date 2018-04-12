@@ -2,3 +2,36 @@
     ViewBag.Title = "About";
 }
 
+<section class="video container-fluid">
+    <img src="http://via.placeholder.com/2000x950" class="img-responsive" style="max-height: 780px; width: 100%; min-height: 380px;" />
+    <div class="row">
+        <div class="col-xs-12 col-sm-9 col-sm-offset-4 col-md-9 col-md-offset-4 col-lg-8 col-lg-offset-4 brand">
+            <div class="col-sm-10 col-md-10 col-lg-6">
+                <h2>NATIONAL<br />BRANDS <span>+</span><br />LOCAL<br /><span>AD</span>VERTISING</h2>
+                <p>the customer connection solution</p>
+                <p>We connect your brand to the right customers in your</p>
+                <p>area through targeted use of printed promotional items.</p>
+                <a href="" class="btn btn-default red" data-toggle="modal" data-target="#freeartworkmodal">Start Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="boxes container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-6 center-block">
+            <h3 class="text-center">With over 7,500 distributors<br />nationwide, we're not your<br />average print company.</h3>
+            <p class="text-center"><i class="arrow down"></i></p>
+        </div>
+    </div>
+</section>
+
+@Html.Partial("_FreeArtworkModal")
+@Html.Partial("_SuccessModal")
+
+@section Scripts {  
+
+    <script>
+        $("#emailContact").validate();
+    </script>
+}

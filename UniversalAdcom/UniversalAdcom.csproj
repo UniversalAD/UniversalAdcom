@@ -224,6 +224,7 @@
     <Content Include="App_Data\Images\uac.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\About\boxes.jpg" />
     <Content Include="Content\Images\Home\Ace.png" />
     <Content Include="Content\Images\Home\Allstate-Ins.png" />
     <Content Include="Content\Images\Home\American-Legion.png" />
