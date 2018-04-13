@@ -225,6 +225,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\About\boxes.jpg" />
+    <Content Include="Content\Images\About\Icons_04.png" />
+    <Content Include="Content\Images\About\Icons_05.png" />
+    <Content Include="Content\Images\About\Icons_09.png" />
+    <Content Include="Content\Images\About\Icons_12.png" />
     <Content Include="Content\Images\Home\Ace.png" />
     <Content Include="Content\Images\Home\Allstate-Ins.png" />
     <Content Include="Content\Images\Home\American-Legion.png" />
@@ -257,6 +261,7 @@
     <Content Include="Content\Images\Home\Subway.png" />
     <Content Include="Content\Images\Home\Waffle-house.png" />
     <Content Include="Content\Images\Logo.png" />
+    <Content Include="Content\Images\About\warehouse.jpg" />
     <Content Include="Content\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
     </Content>
