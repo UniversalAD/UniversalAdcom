@@ -67,8 +67,8 @@
                     <li>Effectively <span>ad</span>vertise, acquire customers and become more connected with their communities.</li>
                     <li>Interact and engage with local consumer hot-spots  like never before.</li>
                     <li>Catch more than the eye of consumers and snag the attention of competitors.</li>
-                </ul>               
-                    @Html.ActionLink("Request More Info About Our Campaigns Now!", null, null, new { @class = "btn btn-default red center-block", data_toggle = "modal", data_target = "campaign" })              
+                </ul>             
+                <a href="" id="campaignButton"  data-target="#campaign" data-toggle="modal" class="btn btn-default red center-block">Request More Info About Our Campaigns Now!</a>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-5 col-md-push-1 col-lg-5 col-lg-push-1">
                 <h4 class="text-center">For Distributors <br />Re<span>ad</span>y To</h4>
@@ -78,7 +78,7 @@
                     <li>Combine forces & collab with other local hotshots from complimentary industries</li>
                     <li>Get a whole bunch of FREE stuff with your brand printed on it to pass out to every patron walking through the door.</li>
                 </ul>              
-                    @Html.ActionLink("Sign Up to Become A Distributor Today!", null, null, new { @class = "btn btn-default red center-block", data_toggle = "modal", data_target = "distributer" })              
+                <a href="" id="distributorButton" data-target="#campaign" data-toggle="modal" class="btn btn-default red center-block">Sign Up to Become A Distributor Today!</a>              
             </div>
         </div>
     </div>
@@ -86,10 +86,14 @@
 
 @Html.Partial("_FreeArtworkModal")
 @Html.Partial("_SuccessModal")
+@Html.Partial("_CampaignContactPartial")
 
 @section Scripts {
 
+    @Scripts.Render("~/Scripts/About.js");
+
     <script>
         $("#emailContact").validate();
+        $("#campaigncontact").validate();
     </script>
 }
