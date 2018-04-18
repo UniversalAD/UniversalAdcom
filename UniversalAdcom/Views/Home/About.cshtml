@@ -2,3 +2,98 @@
     ViewBag.Title = "About";
 }
 
+<section class="video container-fluid">
+    <img src="http://via.placeholder.com/2000x950" class="img-responsive" style="max-height: 780px; width: 100%; min-height: 380px;" />
+    <div class="row">
+        <div class="col-xs-12 col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 col-lg-8 col-lg-offset-4 brand">
+            <div class="col-sm-10 col-md-10 col-lg-6">
+                <h2>NATIONAL<br />BRANDS <span>+</span><br />LOCAL<br /><span>AD</span>VERTISING</h2>
+                <p>the customer connection solution</p>
+                <p>We connect your brand to the right customers in your</p>
+                <p>area through targeted use of printed promotional items.</p>
+                <a href="" class="btn btn-default red" data-toggle="modal" data-target="#freeartworkmodal">Start Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="boxes container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-6 center-block">
+            <h3 class="text-center">With over 7,500 distributors<br />nationwide, we're not your<br />average print company.</h3>
+            <p class="text-center"><i class="arrow down"></i></p>
+        </div>
+    </div>
+</section>
+
+<section class="programs">
+    <div class="row">
+        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 relative">
+            <h4 class="text-center">Counties</h4>
+            <img src="@Url.Content("/Content/Images/About/Icons_09.png")" class="img-responsive center-block" />
+            <p class="text-center">Our bre<span>ad</span> and butter programs. Since 1976, we've been fantastic spre<span>ad</span>ers of brand awareness</p>
+            @Html.ActionLink("Learn More >", "Counties", "Home", null, new { @class = "text-center center-block" })
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 relative">
+            <h4 class="text-center">Pizza</h4>
+            <img src="@Url.Content("/Content/Images/About/Icons_05.png")" class="img-responsive center-block" />
+            <p class="text-center">One of Pop's favorite programs. What can we say.... we're attracted to cheesy <span>ad</span>vertising.</p>
+            @Html.ActionLink("Learn More >", "Pizza", "Home", null, new { @class = "text-center center-block" })
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 relative">
+            <h4 class="text-center">Schools</h4>
+            <img src="@Url.Content("/Content/Images/About/Icons_04.png")" class="img-responsive center-block" />
+            <p class="text-center">We have spirit. Yes we do. Support your <span>sc</span>hool so they can too.</p>
+            @Html.ActionLink("Learn More >", "Schools", "Home", null, new { @class = "text-center center-block" })
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 relative">
+            <h4 class="text-center">Entertainment</h4>
+            <img src="@Url.Content("/Content/Images/About/Icons_12.png")" class="img-responsive center-block" />
+            <p class="text-center">Fun <span>Bu</span>sinesses Only. We can't show up to the party with any boring ones.</p>
+            @Html.ActionLink("Learn More >", "Entertainment", "Home", null, new { @class = "text-center center-block" })
+        </div>
+    </div>
+</section>
+
+<section class="mutual">
+    <div class="row">
+        <div class="col-lg-10 center-block">
+            <h3 class="text-center">We Create Mutually <br /> Beneficial Relationships</h3>
+            <div class="border-bottom center-block"></div>
+            <div class="col-xs-12 col-sm-6 col-md-5 col-md-push-1 col-lg-5 col-lg-push-1">
+                <h4 class="text-center">For Businesses <br />Re<span>ad</span>y To</h4>
+                <ul>
+                    <li>Grow their brand and increase customer retention</li>
+                    <li>Effectively <span>ad</span>vertise, acquire customers and become more connected with their communities.</li>
+                    <li>Interact and engage with local consumer hot-spots  like never before.</li>
+                    <li>Catch more than the eye of consumers and snag the attention of competitors.</li>
+                </ul>             
+                <a href="" id="campaignButton"  data-target="#campaign" data-toggle="modal" class="btn btn-default red center-block">Request More Info About Our Campaigns Now!</a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5 col-md-push-1 col-lg-5 col-lg-push-1">
+                <h4 class="text-center">For Distributors <br />Re<span>ad</span>y To</h4>
+                <ul>
+                    <li>Make a positive impact and forge meaningful connections.</li>
+                    <li>Productively influence a strong presence of commerce and community</li>
+                    <li>Combine forces & collab with other local hotshots from complimentary industries</li>
+                    <li>Get a whole bunch of FREE stuff with your brand printed on it to pass out to every patron walking through the door.</li>
+                </ul>              
+                <a href="" id="distributorButton" data-target="#campaign" data-toggle="modal" class="btn btn-default red center-block">Sign Up to Become A Distributor Today!</a>              
+            </div>
+        </div>
+    </div>
+</section>
+
+@Html.Partial("_FreeArtworkModal")
+@Html.Partial("_SuccessModal")
+@Html.Partial("_CampaignContactPartial")
+
+@section Scripts {
+
+    @Scripts.Render("~/Scripts/About.js");
+
+    <script>
+        $("#emailContact").validate();
+        $("#campaigncontact").validate();
+    </script>
+}

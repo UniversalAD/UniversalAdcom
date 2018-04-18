@@ -21,7 +21,7 @@
                         <ul class="navbar-nav">
                             <li>@Html.ActionLink("How it Works", "HowItWorks", "Home")</li>
                             <li class="dropdown">
-                                @Html.ActionLink("Programs", "About", "Home", new { @class = "dropdown-toggle" })
+                                @Html.ActionLink("Programs", "About", "Home", null, new { @class = "dropdown-toggle" })
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <li>@Html.ActionLink("County", "County", "Products")</li>
                                     <li>@Html.ActionLink("Pizza", "Pizza", "Products")</li>

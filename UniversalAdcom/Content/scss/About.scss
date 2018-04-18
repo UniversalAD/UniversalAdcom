@@ -1,3 +1,306 @@
-﻿.about {
+﻿@import 'Typography.scss';
 
+.video {
+    position: relative;
+
+    .brand {
+        position: absolute;
+        top: 0;
+        background-color: rgba(255,255,255, .5);
+        padding: 5.3vw;
+        height: 100%;
+
+        @media (min-width: 1300px) {
+            padding: 6.7vw;
+        }
+
+        @media (max-width: 1100px) {
+            padding: 3.9vw;
+        }
+
+        @media (max-width: 900px) {
+            padding: 3.1vw;
+        }
+
+        @media (max-width: 768px) {
+            padding: .9vw;
+        }
+
+        @media (max-width: 480px) {
+            padding: 3.1vw;
+        }
+
+        h2 {
+            color: #414141;
+            font-size: 4vw;
+            border-bottom: solid 1px #000;
+
+            @media (min-width: 1300px) {
+                font-size: 4.3em;
+            }
+
+            @media (max-width: 680px) {
+                font-size: 6.2vw;
+                margin-top: 5px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 7.3vw;
+            }
+
+            @media (max-width: 400px) {
+                font-size: 9vw;
+                margin-top: 15.2px;
+            }
+
+            span {
+                color: $red;
+            }
+        }
+
+        p {
+            color: #414141;
+            font-size: 1.3em;
+
+            @media (max-width: 767px) {
+                font-size: 2.6vw;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 4.6vw;
+                margin-bottom: 5px;
+            }
+
+            &:first-of-type {
+                margin-bottom: 1.7vw;
+                color: $red;
+            }
+
+            &:nth-of-type(3) {
+                margin-bottom: 1.7vw;
+            }
+        }
+
+        a {
+            color: $white;
+            font-size: 1.6em;
+
+            @media (max-width: 767px) {
+                font-size: 3.6vw;
+            }
+        }
+    }
+}
+
+.boxes {
+    background-image: url('/Content/Images/About/boxes.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    padding: 35px 0;
+
+    @media (max-width: 480px) {
+        padding: 35px 0;
+    }
+
+    h3 {
+        text-shadow: 1px 1px 0 $white;
+        font-size: 3.6vw;
+
+        @media (max-width: 480px) {
+            font-size: 1.7em;
+        }
+    }
+
+    p {
+        i {
+            border: solid black;
+            border-width: 0 10px 10px 0;
+            display: inline-block;
+            padding: 23px;
+
+            &.down {
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+.programs {
+    margin: 25px 0;
+
+    .row {
+        border: none;
+        padding: 0;
+        height: auto;
+    }
+
+    div {
+        padding: 25px;
+        border-right: dashed 2px $red;
+
+        @media (max-width: 900px) {
+            min-height: 360px;
+        }
+
+        @media (max-width: 480px) {
+            padding: 0;
+            min-height: 320px;
+        }
+
+        &:nth-of-type(2), &:nth-of-type(4) {
+            @media (max-width: 767px) {
+                border-right: none;
+            }
+        }
+
+        &:nth-of-type(4) {
+            border-right: none;
+        }
+
+        h4 {
+            font-size: 3vw;
+            color: $red;
+
+            @media (min-width: 1400px) {
+                font-size: 2vw;
+            }
+        }
+
+        img {
+            max-width: 150px;
+        }
+
+        p {
+            padding: 15px 0;
+            height: 100px;
+
+            @media (max-width: 480px) {
+                padding: 15px 5px;
+            }
+
+            span {
+                color: $red;
+            }
+        }
+
+        a {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            color: $red;
+            transform: translate(-50%, 0);
+
+            &:hover {
+                opacity: .5;
+            }
+        }
+    }
+}
+
+.mutual {
+    position: relative;
+    background-image: url("/Content/Images/About/warehouse.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    padding: 25px 0;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,.6);
+    }
+
+    div {
+        @media (max-width: 767px) {
+            margin-top: 35px;
+        }
+
+        &.row, &.col-lg-10 {
+            margin-top: 0;
+        }
+    }
+
+    h3 {
+        color: $white;
+        font-size: 3.3em;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, .5);
+
+        span {
+            color: $red;
+        }
+    }
+
+    h4 {
+        color: $white;
+        font-size: 3em;
+
+        @media (max-width: 480px) {
+            font-size: 2.9em;
+        }
+
+        span {
+            color: $red;
+        }
+    }
+
+    ul {
+        margin-top: 0;
+        list-style-type: disc;
+        padding: 0 25px;
+        height: 280px;
+
+
+        @media (min-width: 1350px) {
+            max-height: 260px;
+        }
+
+        @media (max-width: 900px) {
+            height: 100%;
+        }
+
+        @media (max-width: 480px) {
+            padding: 0;
+            height: auto;
+        }
+
+        li {
+            margin: 0 0 20px 0;
+            font-size: 1.2em;
+            color: $white;
+
+            span {
+                color: $red;
+            }
+        }
+    }
+
+    .btn {
+        max-width: 390px;
+
+        @media (max-width: 768px) {
+            white-space: normal;
+            max-width: 100%;
+        }
+    }
+
+    .border-bottom {
+        border-bottom: solid 2px $white;
+        width: 47%;
+
+        @media (min-width: 1350px) {
+            width: 32%;
+        }
+
+        @media (max-width: 767px) {
+            width: 80%;
+            margin-top: 5px;
+        }
+    }
 }

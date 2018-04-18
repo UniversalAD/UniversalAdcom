@@ -1,0 +1,13 @@
+﻿@import 'Typography.scss';
+
+.campaign {
+    color: $white;
+
+    .modal-content {
+        background-color: #000;
+
+        .modal-header {
+            border: none;
+        }     
+    }
+}

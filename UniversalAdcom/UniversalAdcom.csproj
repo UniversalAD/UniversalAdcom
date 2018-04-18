@@ -214,6 +214,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CampaigeContact.cs" />
+    <Compile Include="Models\Extensions.cs" />
     <Compile Include="Models\FreeArtworkContact.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -224,6 +226,11 @@
     <Content Include="App_Data\Images\uac.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\About\boxes.jpg" />
+    <Content Include="Content\Images\About\Icons_04.png" />
+    <Content Include="Content\Images\About\Icons_05.png" />
+    <Content Include="Content\Images\About\Icons_09.png" />
+    <Content Include="Content\Images\About\Icons_12.png" />
     <Content Include="Content\Images\Home\Ace.png" />
     <Content Include="Content\Images\Home\Allstate-Ins.png" />
     <Content Include="Content\Images\Home\American-Legion.png" />
@@ -256,6 +263,7 @@
     <Content Include="Content\Images\Home\Subway.png" />
     <Content Include="Content\Images\Home\Waffle-house.png" />
     <Content Include="Content\Images\Logo.png" />
+    <Content Include="Content\Images\About\warehouse.jpg" />
     <Content Include="Content\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
     </Content>
@@ -265,6 +273,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\About.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -295,6 +304,7 @@
     <Content Include="Scripts\Home.js" />
     <Content Include="Scripts\Howitworks.js" />
     <Content Include="Content\scss\About.scss" />
+    <Content Include="Content\scss\CampaignContactPartial.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -349,6 +359,7 @@
     <Content Include="Views\Shared\_SuccessModal.cshtml" />
     <Content Include="Views\Emails\_ViewStart.cshtml" />
     <Content Include="Views\Emails\Web.config" />
+    <Content Include="Views\Shared\_CampaignContactPartial.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

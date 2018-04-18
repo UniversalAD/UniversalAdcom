@@ -35,6 +35,10 @@
                 $('.longevity-heading').show(2000);
             }
 
+            if (windowScroll > 1789) {
+                $('.border-bottom').show(2000);
+            }
+
         }
 
         else {
