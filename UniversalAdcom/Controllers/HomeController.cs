@@ -112,9 +112,18 @@ namespace UniversalAdcom.Controllers
                 message.AddTo("chrisg@universalad.com");
                 message.From = new MailAddress("connerg@uac4u.com");
                 message.Subject = "UAC4U Advertising Specialist";
+                var bodyCampaign = "<h1>Request More Info About Campaign</h1> <br />First Name: {0} <br /> Last Name: {1} <br /> Phone: {2} {3} <br /> Email: {4}";
+                var bodyDistributor = "<h1>Request To Become a Distributor</h1> <br />First Name: {0} <br /> Last Name: {1} <br /> Phone: {2} {3} <br /> Email: {4}";
 
-                var body = "First Name: {0} <br /> Last Name: {1} <br /> Phone: {2} {3} <br /> Email: {4}";
-                message.Html = String.Format(body, model.FirstName, model.LastName, model.CountryPrefix, model.Phone, model.Email);
+                if (model.Hidden == true)
+                {
+                    message.Html = String.Format(bodyCampaign, model.FirstName, model.LastName, model.CountryPrefix, model.Phone, model.Email);
+                }
+                else
+                {
+                    message.Html = String.Format(bodyDistributor, model.FirstName, model.LastName, model.CountryPrefix, model.Phone, model.Email);
+                }
+                
 
                 var username = ConfigurationManager.AppSettings["sendGridUser"];
                 var pswd = ConfigurationManager.AppSettings["sendGridPassword"];
@@ -147,7 +156,7 @@ namespace UniversalAdcom.Controllers
             message.AddTo(Email);
             message.From = new MailAddress("connerg@uac4u.com");
             message.Subject = "UAC4U Advertising Specialist";
-            var body = "<body style='width: 100%; background-color: #d4d4d4;'><table style='width: 50%;  border: solid 1px #000; padding: 35px; background-color: #fff;' align='center'>" +
+            var body = "<body style='width: 100%; background-color: #d4d4d4;'><table style='width: 60%;  border: solid 1px #000; padding: 35px; background-color: #fff;' align='center'>" +
                 "<th colspan='2' style='border-bottom: solid 2px #000; text-align: center; font-size: 2.2em; padding: 25px;'>How Can We Help?</th>" +
                 "<tr><td colspan='2' style='padding: 10px;'>Hello {0}!,</td></tr>" +
                 "<tr><td colspan='2' style='padding: 10px;'>To better help our team provide you with the best assistance possible, please respond to this email with your Customer ID Number and/or the Invoice Number associated with the particular order in question. </td></tr>" +
@@ -177,7 +186,7 @@ namespace UniversalAdcom.Controllers
             message.AddTo(Email);
             message.From = new MailAddress("connerg@uac4u.com");
             message.Subject = "UAC4U Advertising Specialist";
-            var body = "<body style='width: 100%; background-color: #d4d4d4;'><table style='width: 50%;  border: solid 1px #000; padding: 35px; background-color: #fff;' align='center'>" +
+            var body = "<body style='width: 100%; background-color: #d4d4d4;'><table style='width: 60%;  border: solid 1px #000; padding: 35px; background-color: #fff;' align='center'>" +
                 "<th colspan='2' style='border-bottom: solid 2px #000; text-align: center; font-size: 2.2em; padding: 25px;'>Thank You for Your Request</th>" +
                 "<tr><td colspan='2' style='text-align: center; padding: 25px;'>{0}, We're getting into our system now and locating all of our awesome distributors in or around your area. Please, feel free to respond to this email with a more detailed location to better narrow down our search, or you could send us your logo and we'll have a free ad created for you in no time!</td></tr>" +
                 "<tr><td colspan='2' style='text-align: center; padding: 25px;'><img style='width: 100%;' src='https://lh3.googleusercontent.com/B-s9AHVW-l17suVDXlJ_0voDsOBuaRjqPNcw9kR1zVUXpyQgVLWzEK7J3owQgOyZw-A3x2d4BqtInM5N9PYJWSM8hEMejcwEQuCoGAu9_Zqo7RnktDXKyRKXHWS2SNt8ceE2-igdq1X2nWZlr_g-7S16IpSGuo_2yzHME9kJ8opCnc--6f6oaSO1WnnHdQGGX_D2VUJqxLOASMh1cloQd2_WUgE8CzB0QE6wdtmEYADEHH2ZdiRLqZ2Fkzp6cYAxxbVUA6bwsN9MBrAkPI9om256ziha7xe4dwIb9mrohIX7KWwHRQD5vavmA8lybsxmrS93vkywbekon0s5ZdP7k3AZ2o6klrXnEB03rA6dcMCw7CT7LyoJJ7CP78mFV9kD_OC9HiNbTf8RP2x9PUi5FcvxaZHCqU94IYd9OaQV1ICkHjRCa7_UHI2j_g0VOcBnyhrjWqDvOxC0ygta-oZMis-PazvciwpxnsESWdNLufVHyVlb8v8X9R7Se48KZwqmHaQ2AAgVHnTNkvYiGf_r6_9fwii8pqD8ZX4c1H0iIN2Z6cOyZTKDOYC66x3E1r5eZq8YL-d1YS68b1ZbFRv1Xdyvp9VrUxq5Xi-XEA=w700-h219-no'></td></tr>" +
