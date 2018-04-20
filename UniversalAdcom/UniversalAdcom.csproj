@@ -226,11 +226,17 @@
     <Content Include="App_Data\Images\uac.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\County\sad business guy.jpg" />
     <Content Include="Content\Images\About\boxes.jpg" />
     <Content Include="Content\Images\About\Icons_04.png" />
     <Content Include="Content\Images\About\Icons_05.png" />
     <Content Include="Content\Images\About\Icons_09.png" />
     <Content Include="Content\Images\About\Icons_12.png" />
+    <Content Include="Content\Images\About\Schools-Roofbg_03.png" />
+    <Content Include="Content\Images\County\happy-workers.png" />
+    <Content Include="Content\Images\County\sad_business_guy.jpg" />
+    <Content Include="Content\Images\County\Web-Images-1.png" />
+    <Content Include="Content\Images\County\Web-Images-2.png" />
     <Content Include="Content\Images\Home\Ace.png" />
     <Content Include="Content\Images\Home\Allstate-Ins.png" />
     <Content Include="Content\Images\Home\American-Legion.png" />
@@ -264,6 +270,12 @@
     <Content Include="Content\Images\Home\Waffle-house.png" />
     <Content Include="Content\Images\Logo.png" />
     <Content Include="Content\Images\About\warehouse.jpg" />
+    <Content Include="Content\Images\Pizza\funny-pizza-man.png" />
+    <Content Include="Content\Images\Pizza\kitty.png" />
+    <Content Include="Content\Images\Pizza\pizza-guy-with-mag.png" />
+    <Content Include="Content\Images\Pizza\Pizza-Page_Product.png" />
+    <Content Include="Content\Images\Pizza\pizza-slice-dog-costume-8876.jpg" />
+    <Content Include="Content\Images\Pizza\slices_bg_02.png" />
     <Content Include="Content\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
     </Content>
@@ -300,11 +312,14 @@
     <Content Include="Content\scss\HowItWorks.scss" />
     <Content Include="Content\scss\FreeArtworkModal.scss" />
     <Content Include="Content\scss\SuccessModal.scss" />
+    <Content Include="Scripts\County.js" />
     <Content Include="Scripts\EmailValidation.js" />
     <Content Include="Scripts\Home.js" />
     <Content Include="Scripts\Howitworks.js" />
     <Content Include="Content\scss\About.scss" />
     <Content Include="Content\scss\CampaignContactPartial.scss" />
+    <Content Include="Content\scss\County.scss" />
+    <Content Include="Content\scss\Pizza.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -316,6 +331,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\Nav.js" />
+    <Content Include="Scripts\Pizza.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Web.config" />
@@ -360,6 +376,8 @@
     <Content Include="Views\Emails\_ViewStart.cshtml" />
     <Content Include="Views\Emails\Web.config" />
     <Content Include="Views\Shared\_CampaignContactPartial.cshtml" />
+    <Content Include="Views\Home\County.cshtml" />
+    <Content Include="Views\Home\Pizza.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
