@@ -237,6 +237,8 @@
     <Content Include="Content\Images\County\sad_business_guy.jpg" />
     <Content Include="Content\Images\County\Web-Images-1.png" />
     <Content Include="Content\Images\County\Web-Images-2.png" />
+    <Content Include="Content\Images\Entertainment\Entertainment---Crowd-Banner-image.png" />
+    <Content Include="Content\Images\Entertainment\Entertainment---Tote-image.png" />
     <Content Include="Content\Images\Home\Ace.png" />
     <Content Include="Content\Images\Home\Allstate-Ins.png" />
     <Content Include="Content\Images\Home\American-Legion.png" />
@@ -276,6 +278,12 @@
     <Content Include="Content\Images\Pizza\Pizza-Page_Product.png" />
     <Content Include="Content\Images\Pizza\pizza-slice-dog-costume-8876.jpg" />
     <Content Include="Content\Images\Pizza\slices_bg_02.png" />
+    <Content Include="Content\Images\Schools\boxes.jpg" />
+    <Content Include="Content\Images\Schools\Gregory_school_products.png" />
+    <Content Include="Content\Images\Schools\School-Page-Strip-12-1-17-rj.png" />
+    <Content Include="Content\Images\Schools\School-Page_Header-Banner-12-1-17rj.png" />
+    <Content Include="Content\Images\Schools\School-Page_Product_Trio.png" />
+    <Content Include="Content\Images\Schools\working-box.jpg" />
     <Content Include="Content\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
     </Content>
@@ -320,6 +328,8 @@
     <Content Include="Content\scss\CampaignContactPartial.scss" />
     <Content Include="Content\scss\County.scss" />
     <Content Include="Content\scss\Pizza.scss" />
+    <Content Include="Content\scss\Schools.scss" />
+    <Content Include="Content\scss\Entertainment.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -378,6 +388,8 @@
     <Content Include="Views\Shared\_CampaignContactPartial.cshtml" />
     <Content Include="Views\Home\County.cshtml" />
     <Content Include="Views\Home\Pizza.cshtml" />
+    <Content Include="Views\Home\Schools.cshtml" />
+    <Content Include="Views\Home\Entertainment.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

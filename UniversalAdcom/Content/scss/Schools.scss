@@ -1,0 +1,138 @@
+﻿@import 'Typography.scss';
+
+.school-header {
+    background-image: url("/Content/Images/Schools/School-Page_Header-Banner-12-1-17rj.png");
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+
+    @media (max-width: 480px) {
+        padding: 50px 0;
+    }
+
+    h2 {
+        color: $white;
+        border-right: solid 2px #fff;
+        text-align: right;
+        padding-right: 15px;
+        text-shadow: 1px 1px 0 rgba(0,0,0,.7);
+    }
+
+    .col-xs-10 {
+        @media (max-width: 400px) {
+            width: 100%;
+        }
+    }
+}
+
+.ready-break {
+    position: relative;
+    margin-bottom: 40px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -40px;
+        width: 100%;
+        height: 100%;
+        max-height: 100px;
+        background-image: url("/Content/Images/Schools/School-Page-Strip-12-1-17-rj.png");
+        background-size: contain;
+        z-index: -1;
+
+        @media (max-width: 1000px) {
+            bottom: auto;
+        }
+
+        @media (max-width: 767px) {
+            bottom: 30%;
+            background-repeat: no-repeat;
+        }
+
+        @media (max-width: 480px) {
+            bottom: 45%;
+        }
+    }
+
+    h3 {
+        font-size: 4em;
+        border-left: 2px solid $red;
+        padding-left: 15px;
+
+        span {
+            color: $red;
+        }
+    }
+}
+
+.home-field {
+    height: 100%;
+
+    .row {
+        background-color: rgb(4, 81, 132);
+        padding: 25px 0 35px 0;
+
+        h2 {
+            color: $white;
+        }
+    }
+
+    .card-deck {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 75%;
+
+        @media (max-width: 768px) {
+            position: relative;
+            width: 100%;
+        }
+
+        .card {
+            width: 20%;
+            height: 216px;
+            display: inline-block;
+            float: left;
+            background-color: rgb(255, 97, 97);
+
+            @media (max-width: 650px) {
+                width: 100%;
+                height: 100%;
+            }
+
+            .card-body {
+                width: 100%;
+                height: 100%;                
+                color: $white;
+
+                img {
+                    max-height: 216px;
+                    min-height: 216px;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                @media (max-width: 650px) {
+                    height: 100%;
+                }
+
+                h5 {
+                    font-size: 1.5em;
+                }
+
+                p {
+                    padding: 15px 0;
+                }
+            }
+        }
+    }
+}
+
+.merch {
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
