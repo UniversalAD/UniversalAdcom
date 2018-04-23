@@ -41,6 +41,26 @@ namespace UniversalAdcom.Controllers
             return View();
         }
 
+        public ActionResult County()
+        {
+            return View();
+        }
+
+        public ActionResult Pizza()
+        {
+            return View();
+        }
+
+        public ActionResult Schools()
+        {
+            return View();
+        }
+
+        public ActionResult Entertainment()
+        {
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult FreeArtworkContact(FreeArtworkContact model)

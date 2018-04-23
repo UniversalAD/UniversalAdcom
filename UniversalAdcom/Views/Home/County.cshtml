@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "County";
+}
+
+<section class="county">
+    <div class="row network">
+        <div class="col-lg-7 center-block">
+            <h2 class="text-center">Is Your Networking...<br />Not Working?</h2>
+        </div>
+    </div>
+</section>
+
+<section class="happy-workers m-top-25">
+    <div class="row">
+        <div class="col-lg-10 center-block">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 col-lg-push-1">
+                <img src="@Url.Content("/Content/Images/County/happy-workers.png")" class="img-responsive" />
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 col-lg-push-1 help">
+                <h3 class="text-center">We're Here<br />To Help!</h3>
+                <p>When you participate in our county campaign programs, you'll ultimately become synonymous with the He<span>ad</span> Honchos of your town, simply be being featured on the promos they distribute.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="county circles m-top-25" id="partner">
+    <div class="row">
+        <div class="col-md-12 col-lg-9 center-block">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <div class="circle">
+                    <h5 class="text-center"><span>967</span><br />COUNTY CHAMBERS</h5>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <div class="circle">
+                    <h5 class="text-center"><span>1,100</span><br />COUNTY CLERKS</h5>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <div class="circle">
+                    <h5 class="text-center"><span>902</span><br />YMCA's</h5>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <div class="circle">
+                    <h5 class="text-center"><span>849</span><br />LIBRARIES</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="leader m-top-25" id="partner">
+    <div class="row">
+        <div class="col-lg-9 center-block">
+            <h4 class="text-center">Be Seen as a le<span>ad</span>er,<br />get treated like one.</h4>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h5>Combine Forces</h5>
+                <p>and team up with the most trusted influencer's of your town. Our products; your campaigns, are passed out to their loyal patrons and the county members that we work with tend to connect our clients with some of most sought after demographic groups in around. </p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h5>Brush Shoulders</h5>
+                <p>with, and gain exclusive access to audiences that your competition can't get to, because you're alre<span>ad</span>y there! We make if possible for your brand to mix it up with some of the biggest players in your town;  County <span>Ad</span>ministrators, City Officials and other local business le<span>ad</span>ers.</p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h5>Get Noticed</h5>
+                <p>by the best of the best in their respected industries through our proven campaigning strategies. We make sure your name is being seen while they have their city meetings, engage the community and make their connections.</p>
+            </div>
+            <div class="col-lg-6">
+                <a href="" id="distributorButton" data-target="#campaign" data-toggle="modal" class="btn btn-default red center-block">Request A List Of Distributors Near You!</a>
+            </div>
+            <div class="col-lg-6">
+                @Html.ActionLink("View All Products", "Products", "Home", new { @class = "btn btn-default red" })
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="m-top-25">
+    <div class="row">
+        <div class="col-lg-10 center-block">
+            <div class="col-sm-6 col-md-6 col-lg-5 col-lg-push-1">
+                <img src="@Url.Content("/Content/Images/County/Web-Images-2.png")" class="img-responsive" />
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-5 col-lg-push-1">
+                <img src="@Url.Content("/Content/Images/County/Web-Images-1.png")" class="img-responsive" />
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@Html.Partial("_CampaignContactPartial")
+
+
+@section Scripts {
+
+    @Scripts.Render("~/scripts/County.js")
+
+    <script>
+        $("#campaigncontact").validate();
+    </script>
+}

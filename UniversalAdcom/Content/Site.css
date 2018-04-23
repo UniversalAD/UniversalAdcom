@@ -82,6 +82,9 @@ ul {
 label.error {
   color: #FF0000; }
 
+.border-right {
+  border-right: 2px solid #000; }
+
 .nav {
   background-color: #fff;
   border: none; }
@@ -260,6 +263,9 @@ label.error {
   .btn.white {
     background-color: #fff;
     color: #FF0000; }
+  .btn.black {
+    background-color: #000;
+    color: #fff; }
 
 @font-face {
   font-family: 'ralewayregular';
@@ -747,6 +753,12 @@ label.error {
         width: 80%;
         margin-top: 5px; } }
 
+.schools img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  object-position: center; }
+
 @font-face {
   font-family: 'ralewayregular';
   src: url("Fonts/raleway-regular-webfont.woff2") format("woff2"), url("Fonts/raleway-regular-webfont.woff") format("woff");
@@ -771,6 +783,398 @@ label.error {
     background-color: #000; }
     .campaign .modal-content .modal-header {
       border: none; }
+
+@font-face {
+  font-family: 'ralewayregular';
+  src: url("Fonts/raleway-regular-webfont.woff2") format("woff2"), url("Fonts/raleway-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaybold';
+  src: url("Fonts/raleway-bold-webfont.woff2") format("woff2"), url("Fonts/raleway-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaysemibold';
+  src: url("Fonts/raleway-semibold-webfont.woff2") format("woff2"), url("Fonts/raleway-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.county .network {
+  background-image: url("/Content/Images/County/sad_business_guy.jpg");
+  background-position: center;
+  background-size: cover; }
+  .county .network h2 {
+    padding: 100px;
+    color: #000;
+    font-size: 3.5em;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7); }
+    @media (max-width: 767px) {
+      .county .network h2 {
+        padding: 25px; } }
+    @media (max-width: 480px) {
+      .county .network h2 {
+        font-size: 2.5em; } }
+
+.happy-workers .help {
+  padding: 15px; }
+  .happy-workers .help h3 {
+    color: #FF0000;
+    font-size: 3em;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7); }
+  .happy-workers .help p {
+    padding: 25px;
+    font-size: 16px; }
+    .happy-workers .help p span {
+      color: #FF0000; }
+
+.county.circles .circle {
+  margin: 0 auto; }
+  .county.circles .circle h5 {
+    font-size: 1.2em;
+    display: block; }
+    .county.circles .circle h5 span {
+      display: none;
+      font-size: 3em; }
+
+.leader h4 {
+  font-size: 3em; }
+  .leader h4 span {
+    color: #FF0000; }
+
+.leader h5 {
+  color: #414141; }
+
+.leader p span {
+  color: #FF0000; }
+
+.leader .btn {
+  transform: translate(-400%, 0);
+  margin-top: 25px;
+  max-width: 350px; }
+
+@font-face {
+  font-family: 'ralewayregular';
+  src: url("Fonts/raleway-regular-webfont.woff2") format("woff2"), url("Fonts/raleway-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaybold';
+  src: url("Fonts/raleway-bold-webfont.woff2") format("woff2"), url("Fonts/raleway-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaysemibold';
+  src: url("Fonts/raleway-semibold-webfont.woff2") format("woff2"), url("Fonts/raleway-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.slices .col-lg-6 {
+  max-width: 640px; }
+
+.slices h3 {
+  margin: 10px 0;
+  font-size: 3.3em;
+  font-family: sans-serif;
+  text-align: right;
+  transform: translate(-600%, 0); }
+  @media (max-width: 767px) {
+    .slices h3 {
+      text-align: center; } }
+
+.slices h2 {
+  margin: 10px 0;
+  font-size: 3.2em;
+  color: #FF0000;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);
+  transform: translate(600%, 0); }
+  @media (max-width: 767px) {
+    .slices h2 {
+      text-align: center; } }
+
+.slices img {
+  transform: translate(600%, 0); }
+
+.slices .btn {
+  max-width: 100%; }
+
+@media (max-width: 767px) {
+  .slices .border-right {
+    border-bottom: solid 2px #000;
+    border-right: none; } }
+
+.catch {
+  position: relative; }
+  .catch .catch-block {
+    background-color: #FF0000;
+    padding: 100px;
+    height: 600px; }
+    @media (max-width: 1024px) {
+      .catch .catch-block {
+        padding: 70px;
+        height: 500px; } }
+    @media (max-width: 768px) {
+      .catch .catch-block {
+        padding: 50px 5px; } }
+    @media (max-width: 767px) {
+      .catch .catch-block {
+        height: 100%; } }
+    .catch .catch-block h3 {
+      width: 80%;
+      border-bottom: solid 2px #000;
+      font-size: 3.5em;
+      color: #fff; }
+    .catch .catch-block p {
+      padding: 25px 0;
+      color: #fff; }
+    .catch .catch-block .btn {
+      max-width: 100%; }
+  .catch .img-block-parallax {
+    background-image: url("/Content/Images/Pizza/pizza-guy-with-mag.png");
+    background-attachment: fixed;
+    background-position: 340px 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    max-height: 600px; }
+    @media (min-width: 1300px) {
+      .catch .img-block-parallax {
+        background-position: 510px 20px; } }
+    @media (max-width: 1024px) {
+      .catch .img-block-parallax {
+        min-height: 500px; } }
+    @media (max-width: 768px) {
+      .catch .img-block-parallax {
+        background-position: 280px 330px; } }
+    @media (max-width: 767px) {
+      .catch .img-block-parallax {
+        background-position: -50px 330px; } }
+    @media (max-width: 480px) {
+      .catch .img-block-parallax {
+        background-position: 0 190px;
+        min-height: 350px; } }
+    .catch .img-block-parallax.funny-guy {
+      background-image: url("/Content/Images/Pizza/funny-pizza-man.png");
+      background-position: -260px 150px; }
+
+.connected h4 {
+  font-size: 2.1em;
+  font-weight: bold;
+  color: #FF0000; }
+
+.connected p {
+  font-size: 1.5em;
+  color: #000; }
+
+.connected .content-wrapper a {
+  font-size: 1.5em;
+  color: #FF0000;
+  display: inline-block;
+  transform: translate(-600%, 0); }
+  @media (max-width: 767px) {
+    .connected .content-wrapper a {
+      margin: 0 auto;
+      display: block; } }
+
+.connected .content-wrapper img {
+  display: inline-block;
+  transform: translate(600%, 0); }
+  @media (max-width: 767px) {
+    .connected .content-wrapper img {
+      margin: 0 auto;
+      display: block; } }
+
+.pizza-magnet img {
+  width: 100%;
+  max-height: 550px;
+  object-fit: cover;
+  object-position: center; }
+
+@font-face {
+  font-family: 'ralewayregular';
+  src: url("Fonts/raleway-regular-webfont.woff2") format("woff2"), url("Fonts/raleway-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaybold';
+  src: url("Fonts/raleway-bold-webfont.woff2") format("woff2"), url("Fonts/raleway-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaysemibold';
+  src: url("Fonts/raleway-semibold-webfont.woff2") format("woff2"), url("Fonts/raleway-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.school-header {
+  background-image: url("/Content/Images/Schools/School-Page_Header-Banner-12-1-17rj.png");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0; }
+  @media (max-width: 480px) {
+    .school-header {
+      padding: 50px 0; } }
+  .school-header h2 {
+    color: #fff;
+    border-right: solid 2px #fff;
+    text-align: right;
+    padding-right: 15px;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7); }
+  @media (max-width: 400px) {
+    .school-header .col-xs-10 {
+      width: 100%; } }
+
+.ready-break {
+  position: relative;
+  margin-bottom: 40px; }
+  .ready-break:after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    height: 100%;
+    max-height: 100px;
+    background-image: url("/Content/Images/Schools/School-Page-Strip-12-1-17-rj.png");
+    background-size: contain;
+    z-index: -1; }
+    @media (max-width: 1000px) {
+      .ready-break:after {
+        bottom: auto; } }
+    @media (max-width: 767px) {
+      .ready-break:after {
+        bottom: 30%;
+        background-repeat: no-repeat; } }
+    @media (max-width: 480px) {
+      .ready-break:after {
+        bottom: 45%; } }
+  .ready-break h3 {
+    font-size: 4em;
+    border-left: 2px solid #FF0000;
+    padding-left: 15px; }
+    .ready-break h3 span {
+      color: #FF0000; }
+
+.home-field {
+  height: 100%; }
+  .home-field .row {
+    background-color: #045184;
+    padding: 25px 0 35px 0; }
+    .home-field .row h2 {
+      color: #fff; }
+  .home-field .card-deck {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 75%; }
+    @media (max-width: 768px) {
+      .home-field .card-deck {
+        position: relative;
+        width: 100%; } }
+    .home-field .card-deck .card {
+      width: 20%;
+      height: 216px;
+      display: inline-block;
+      float: left;
+      background-color: #ff6161; }
+      @media (max-width: 650px) {
+        .home-field .card-deck .card {
+          width: 100%;
+          height: 100%; } }
+      .home-field .card-deck .card .card-body {
+        width: 100%;
+        height: 100%;
+        color: #fff; }
+        .home-field .card-deck .card .card-body img {
+          max-height: 216px;
+          min-height: 216px;
+          object-fit: cover;
+          width: 100%;
+          height: 100%; }
+        @media (max-width: 650px) {
+          .home-field .card-deck .card .card-body {
+            height: 100%; } }
+        .home-field .card-deck .card .card-body h5 {
+          font-size: 1.5em; }
+        .home-field .card-deck .card .card-body p {
+          padding: 15px 0; }
+
+.merch img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%; }
+
+@font-face {
+  font-family: 'ralewayregular';
+  src: url("Fonts/raleway-regular-webfont.woff2") format("woff2"), url("Fonts/raleway-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaybold';
+  src: url("Fonts/raleway-bold-webfont.woff2") format("woff2"), url("Fonts/raleway-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaysemibold';
+  src: url("Fonts/raleway-semibold-webfont.woff2") format("woff2"), url("Fonts/raleway-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.entertainment-header {
+  background-image: url("/Content/Images/Entertainment/Entertainment---Crowd-Banner-image.png");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  padding: 50px 0;
+  color: #E0AE09; }
+  .entertainment-header p {
+    font-size: 2.3em;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7); }
+  .entertainment-header h2 {
+    font-size: 2.9em;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7); }
+  .entertainment-header .border-left {
+    border-left: solid 2px #E0AE09;
+    padding: 20px 0;
+    margin: 35px 0; }
+    @media (max-width: 767px) {
+      .entertainment-header .border-left {
+        border: none; } }
+
+.entertainment-items {
+  margin-top: 15px;
+  padding: 50px 0;
+  border-top: 3px solid #FF0000;
+  border-bottom: 3px solid #FF0000; }
+  .entertainment-items h3 {
+    font-size: 2.5em; }
+  .entertainment-items p {
+    font-size: 1.2em; }
+    .entertainment-items p span {
+      color: #FF0000; }
+  .entertainment-items img {
+    margin: 0 auto; }
+
+.small-town-affairs {
+  padding: 25px 0; }
+  .small-town-affairs p {
+    font-size: 1.2em;
+    color: #000;
+    max-width: 600px; }
+    .small-town-affairs p span {
+      color: #FF0000; }
+
+.mud-run img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%; }
 
 body {
   padding-top: 50px;

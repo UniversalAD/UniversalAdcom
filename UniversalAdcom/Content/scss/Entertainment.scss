@@ -1,0 +1,75 @@
+﻿@import 'Typography.scss';
+
+.entertainment-header {
+    background-image: url("/Content/Images/Entertainment/Entertainment---Crowd-Banner-image.png");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    padding: 50px 0;
+    color: #E0AE09;    
+
+    p {
+        font-size: 2.3em;
+        text-shadow: 1px 1px 0 rgba(0,0,0,.7);
+    }
+
+    h2 {
+        font-size: 2.9em;
+        text-shadow: 1px 1px 0 rgba(0,0,0,.7);
+    }
+
+    .border-left {
+        border-left: solid 2px #E0AE09;
+        padding: 20px 0;
+        margin: 35px 0;
+
+        @media (max-width: 767px) {
+            border: none;
+        }
+    }
+}
+
+.entertainment-items {
+    margin-top: 15px;
+    padding: 50px 0;
+    border-top: 3px solid $red;
+    border-bottom: 3px solid $red;
+
+    h3 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1.2em;
+
+        span {
+            color: $red;
+        }
+    }
+
+    img {
+        margin: 0 auto;
+    }
+}
+
+.small-town-affairs {
+    padding: 25px 0;
+    p {
+        font-size: 1.2em;
+        color: $black;
+        max-width: 600px;
+
+        span {
+            color: $red;
+        }
+    }
+}
+
+.mud-run {
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}

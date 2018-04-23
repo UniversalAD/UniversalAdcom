@@ -1,0 +1,91 @@
+﻿@import 'Typography.scss';
+
+.county {
+    .network {
+        background-image: url("/Content/Images/County/sad_business_guy.jpg");
+        background-position: center;
+        background-size: cover;
+
+        h2 {
+            padding: 100px;
+            color: #000;
+            font-size: 3.5em;
+            text-shadow: 1px 1px 0 rgba(255,255,255,.7);
+
+            @media (max-width: 767px) {
+                padding: 25px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 2.5em;
+            }
+        }
+    }
+}
+
+.happy-workers {
+
+    .help {
+        padding: 15px;
+
+        h3 {
+            color: $red;
+            font-size: 3em;
+            text-shadow: 1px 1px 0 rgba(0,0,0,.7);
+        }
+
+        p {
+            padding: 25px;
+            font-size: 16px;
+
+            span {
+                color: $red;
+            }
+        }
+    }
+}
+
+.county {
+    &.circles {
+
+        .circle {
+            margin: 0 auto;
+
+            h5 {
+                font-size: 1.2em;
+                display: block;
+
+                span {
+                    display: none;
+                    font-size: 3em;
+                }
+            }
+        }
+    }
+}
+
+.leader {
+    h4 {
+        font-size: 3em;
+
+        span {         
+            color: $red;
+        }
+    }
+
+    h5 {
+        color: #414141;
+    }
+
+    p {
+        span {
+            color: $red;
+        }
+    }
+
+    .btn {
+        transform: translate(-400%, 0);
+        margin-top: 25px;
+        max-width: 350px;
+    }
+}

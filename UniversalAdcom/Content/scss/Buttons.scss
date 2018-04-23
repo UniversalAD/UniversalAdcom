@@ -21,4 +21,9 @@
         background-color: $white;
         color: $red;
     }
+
+    &.black {
+        background-color: #000;
+        color: $white;
+    }
 }
