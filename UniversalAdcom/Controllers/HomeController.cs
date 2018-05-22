@@ -61,6 +61,11 @@ namespace UniversalAdcom.Controllers
             return View();
         }
 
+        public ActionResult Products()
+        {
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult FreeArtworkContact(FreeArtworkContact model)

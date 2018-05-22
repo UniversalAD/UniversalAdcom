@@ -1,0 +1,125 @@
+﻿
+@{
+    ViewBag.Title = "Products";
+}
+
+<section class="video products-page relative container-fluid">
+    <video autoplay loop src="@Url.Content("/Content/Video/about-products-video.mp4")" typeof="video/mp4"></video>
+    <div class="row">
+        <div class="col-sm-12 col-lg-8 center-block products">
+            <div class="col-sm-8 col-md-7 col-lg-7 border-right">
+                <h2 class="text-left">
+                    It's Not Our Products<br />
+                    That Make Us Different...
+                </h2>
+            </div>
+            <div class="col-sm-4 col-md-5 col-lg-5 padding-left">
+                <h3>It's How We Use Them.</h3>
+                @Html.ActionLink("Request More Info", null, null, new { @class = "text-center" })
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="different-products m-top-25 m-bottom-25">
+    <div class="row row-max">
+        <div class="col-xs-12 col-lg-10 center-block">
+            <div class="col-sm-6 col-md-6 col-lg-6 m-bottom-25">
+                <div class="hover-box" data-target="#maps">
+                    <img src="@Url.Content("/Content/Images/Products/Product-Page-Art_01.png")" class="img-responsive" />
+                    <div class="hover-content" id="maps">
+                        <h4 class="text-center">Magnets & Maps</h4>
+                        <p class="text-center">Make an impression that sticks and directs customers to your brand on a daily basis!</p>
+                        <a href="#" class="btn btn-default red">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6 m-bottom-25">
+                <div class="hover-box" data-target="#apparel">
+                    <img src="@Url.Content("/Content/Images/Products/Product-Page-Art_03.png")" class="img-responsive" />
+                    <div class="hover-content" id="apparel">
+                        <h4 class="text-center">Apparel</h4>
+                        <p class="text-center">Deck your business out in the most comfortable form of advertising out there!</p>
+                        <a href="#" class="btn btn-default red">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6 m-bottom-25">
+                <div class="hover-box" data-target="#bags">
+                    <img src="@Url.Content("/Content/Images/Products/Product-Page-Art_05.png")" class="img-responsive" />
+                    <div class="hover-content" id="bags">
+                        <h4 class="text-center">Bags</h4>
+                        <p class="text-center">Carry your referral business to the next level with these awesome eco-friendly totes. </p>
+                        <a href="#" class="btn btn-default red">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6 m-bottom-25">
+                <div class="hover-box" data-target="#drinkware">
+                    <img src="@Url.Content("/Content/Images/Products/Product-Page-Art_07.png")" class="img-responsive" />
+                    <div class="hover-content" id="drinkware">
+                        <h4 class="text-center">Drinkware</h4>
+                        <p class="text-center">Keep your brand cool and hydrate your business with these awesome products.</p>
+                        <a href="#" class="btn btn-default red">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="kitchen img-block-parallax">
+    <div class="row">
+        <div class="col-xs-11 col-sm-9 col-md-6 col-lg-6 center-block no-gutters">
+            <div class="block-wrap">
+                <h5 class="text-center">DID YOU KNOW?</h5>
+            </div>            
+            <ul div class="col-xs-11 col-sm-10 col-md-9 col-lg-8 center-block">
+                <li>
+                    Businesses who advertise inside
+                    the home are more likely to gain
+                    a customers repeat business.
+                </li>
+                <li>The Refrigerator is considered by many to be the Television of the Kitchen.</li>
+                <li>Customers keep promotional items because of their usability and helpfulness.</li>
+            </ul>
+            <div class="btn-wrapper col-xs-9 col-sm-7 col-md-5 col-lg-5 center-block">
+                @Html.ActionLink("I'm ready. Sign Me Up.", null, null, new { @class="btn btn-default red"})
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="premier-products">
+    <h4 class="text-center">Premier Products</h4>
+    <div class="row">
+        <div class="col-xs-11 col-sm-6 col-sm-push-5 col-md-5 col-md-push-6 col-lg-4 col-lg-push-7 no-gutters">
+            <div class="block-wrap">
+                <h5 class="text-center">TOP PRODUCTS</h5>
+            </div>
+            <p class="text-center col-xs-11 col-sm-10 col-md-9 col-lg-8 center-block">There's An Instant Attraction With Out Magnets!</p>
+            <div class="btn-wrapper col-xs-5 col-sm-5 col-md-5 col-lg-4 center-block">
+                @Html.ActionLink("See More", null, null, new { @class = "btn btn-default red" })
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="premier-products">
+    <div class="red-bar"></div>
+    <div class="row tote">
+        <div class="col-xs-11 col-sm-6 col-sm-push-1 col-md-5 col-md-push-1 col-lg-4 col-lg-push-1 no-gutters">
+            <div class="block-wrap">
+                <h5 class="text-center">TOP PRODUCTS</h5>
+            </div>
+            <p class="text-center col-xs-11 col-sm-10 col-md-9 col-lg-8 center-block">It's In The Bag With These TOTE BAGS!</p>
+            <div class="btn-wrapper col-xs-5 col-sm-5 col-md-5 col-lg-4 center-block">
+                @Html.ActionLink("See More", null, null, new { @class = "btn btn-default red" })
+            </div>
+        </div>
+    </div>
+</section> 
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/ProductHover.js")
+}
