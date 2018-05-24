@@ -1,0 +1,103 @@
+﻿@import 'Typography.scss';
+
+.contact-page {
+
+    .col-lg-11 {
+        margin: 0 auto 50px auto;
+
+        @media (min-width: 1350px) {
+            max-width: 1263px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .col-lg-7 {
+        @media (min-width: 1350px) {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    }
+
+    p {
+        max-width: 152px;
+        margin: 0 auto;
+        color: $red;
+
+        &:nth-of-type(2) {
+            color: #000;
+        }
+    }
+
+    a {
+        &:hover {
+            text-decoration: none;
+            cursor: pointer;
+            opacity: .7;
+        }
+    }
+
+    &.img-block-parallax {
+        background-image: url("/Content/Images/Contact/contact-parralax-img.png");
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        height: 450px;
+        margin-top: 50px;
+
+        @media (max-width: 480px) {
+            height: 250px;
+        }
+    }
+}
+
+.address {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: solid 5px $red;
+    margin-top: 35px;
+
+    .col-lg-7 {
+        @media (min-width: 1350px) {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    }
+
+    h6 {
+        color: #000;
+        font-size: 1em;
+        font-weight: bold;
+
+        span {
+            font-weight: 100;
+        }
+    }
+
+    a {
+        cursor: pointer;
+    }
+}
+
+.partners {
+    .col-lg-7 {
+        @media (min-width: 1350px) {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.howcanwehelpmodal {
+    .modal-content {
+        .close {
+            margin-right: -10px;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}

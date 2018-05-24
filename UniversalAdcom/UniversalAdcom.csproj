@@ -217,6 +217,7 @@
     <Compile Include="Models\CampaigeContact.cs" />
     <Compile Include="Models\Extensions.cs" />
     <Compile Include="Models\FreeArtworkContact.cs" />
+    <Compile Include="Models\HowCanWeHelpYou.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -233,6 +234,22 @@
     <Content Include="Content\Images\About\Icons_09.png" />
     <Content Include="Content\Images\About\Icons_12.png" />
     <Content Include="Content\Images\About\Schools-Roofbg_03.png" />
+    <Content Include="Content\Images\Contact\contact-parralax-img.png" />
+    <Content Include="Content\Images\Contact\contact-us-banner.png" />
+    <Content Include="Content\Images\Contact\event-guru.png" />
+    <Content Include="Content\Images\Contact\fanfare.png" />
+    <Content Include="Content\Images\Contact\free-icon.png" />
+    <Content Include="Content\Images\Contact\hometown-products.png" />
+    <Content Include="Content\Images\Contact\houston-we-have-a-problem.png" />
+    <Content Include="Content\Images\Contact\map-company.png" />
+    <Content Include="Content\Images\Contact\more-info.png" />
+    <Content Include="Content\Images\Contact\pizza-solutions.png" />
+    <Content Include="Content\Images\Contact\premier-impressions.png" />
+    <Content Include="Content\Images\Contact\question-cube.png" />
+    <Content Include="Content\Images\Contact\radio-promos.png" />
+    <Content Include="Content\Images\Contact\scoreboard.png" />
+    <Content Include="Content\Images\Contact\totes-2-go.png" />
+    <Content Include="Content\Images\Contact\uac-our-family-log.png" />
     <Content Include="Content\Images\County\happy-workers.png" />
     <Content Include="Content\Images\County\sad_business_guy.jpg" />
     <Content Include="Content\Images\County\Web-Images-1.png" />
@@ -342,6 +359,7 @@
     <Content Include="Content\scss\Schools.scss" />
     <Content Include="Content\scss\Entertainment.scss" />
     <Content Include="Content\scss\Products.scss" />
+    <Content Include="Content\scss\Contact.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -396,14 +414,13 @@
     <Content Include="Views\Home\HowItWorks.cshtml" />
     <Content Include="Views\Shared\_FreeArtworkModal.cshtml" />
     <Content Include="Views\Shared\_SuccessModal.cshtml" />
-    <Content Include="Views\Emails\_ViewStart.cshtml" />
-    <Content Include="Views\Emails\Web.config" />
     <Content Include="Views\Shared\_CampaignContactPartial.cshtml" />
     <Content Include="Views\Home\County.cshtml" />
     <Content Include="Views\Home\Pizza.cshtml" />
     <Content Include="Views\Home\Schools.cshtml" />
     <Content Include="Views\Home\Entertainment.cshtml" />
     <Content Include="Views\Home\Products.cshtml" />
+    <Content Include="Views\Shared\_HowCanWeHelpModal.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

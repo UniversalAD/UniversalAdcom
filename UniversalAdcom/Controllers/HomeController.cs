@@ -148,7 +148,7 @@ namespace UniversalAdcom.Controllers
                 {
                     message.Html = String.Format(bodyDistributor, model.FirstName, model.LastName, model.CountryPrefix, model.Phone, model.Email);
                 }
-                
+
 
                 var username = ConfigurationManager.AppSettings["sendGridUser"];
                 var pswd = ConfigurationManager.AppSettings["sendGridPassword"];
@@ -184,7 +184,7 @@ namespace UniversalAdcom.Controllers
             var body = "<body style='width: 100%; background-color: #d4d4d4;'><table style='width: 60%;  border: solid 1px #000; padding: 35px; background-color: #fff;' align='center'>" +
                 "<th colspan='2' style='border-bottom: solid 2px #000; text-align: center; font-size: 2.2em; padding: 25px;'>How Can We Help?</th>" +
                 "<tr><td colspan='2' style='padding: 10px;'>Hello {0}!,</td></tr>" +
-                "<tr><td colspan='2' style='padding: 10px;'>To better help our team provide you with the best assistance possible, please respond to this email with your Customer ID Number and/or the Invoice Number associated with the particular order in question. </td></tr>" +
+                "<tr><td colspan='2' style='padding: 10px;'>To better help our team provide's you with the best assistance possible, please respond to this email with your Customer ID Number and/or the Invoice Number associated with the particular order in question. </td></tr>" +
                 "<tr><td colspan='2' style='padding: 10px;'>If you do not know either of those numbers, please respond with your business name, phone number and reason for contacting us.</td></tr>" +
                 "<tr><td colspan='2' style='padding: 10px;'>We'll get back to you as soon as we can!</td></tr>" +
                 "<tr><td colspan='2' style='padding: 10px;'>Thank You, <br />Conner <br />Director - UAC</td></tr>" +
@@ -216,7 +216,7 @@ namespace UniversalAdcom.Controllers
                 "<tr><td colspan='2' style='text-align: center; padding: 25px;'>{0}, We're getting into our system now and locating all of our awesome distributors in or around your area. Please, feel free to respond to this email with a more detailed location to better narrow down our search, or you could send us your logo and we'll have a free ad created for you in no time!</td></tr>" +
                 "<tr><td colspan='2' style='text-align: center; padding: 25px;'><img style='width: 100%;' src='https://lh3.googleusercontent.com/B-s9AHVW-l17suVDXlJ_0voDsOBuaRjqPNcw9kR1zVUXpyQgVLWzEK7J3owQgOyZw-A3x2d4BqtInM5N9PYJWSM8hEMejcwEQuCoGAu9_Zqo7RnktDXKyRKXHWS2SNt8ceE2-igdq1X2nWZlr_g-7S16IpSGuo_2yzHME9kJ8opCnc--6f6oaSO1WnnHdQGGX_D2VUJqxLOASMh1cloQd2_WUgE8CzB0QE6wdtmEYADEHH2ZdiRLqZ2Fkzp6cYAxxbVUA6bwsN9MBrAkPI9om256ziha7xe4dwIb9mrohIX7KWwHRQD5vavmA8lybsxmrS93vkywbekon0s5ZdP7k3AZ2o6klrXnEB03rA6dcMCw7CT7LyoJJ7CP78mFV9kD_OC9HiNbTf8RP2x9PUi5FcvxaZHCqU94IYd9OaQV1ICkHjRCa7_UHI2j_g0VOcBnyhrjWqDvOxC0ygta-oZMis-PazvciwpxnsESWdNLufVHyVlb8v8X9R7Se48KZwqmHaQ2AAgVHnTNkvYiGf_r6_9fwii8pqD8ZX4c1H0iIN2Z6cOyZTKDOYC66x3E1r5eZq8YL-d1YS68b1ZbFRv1Xdyvp9VrUxq5Xi-XEA=w700-h219-no'></td></tr>" +
                 "<tr><td style='padding: 25px; text-align: center; font-size: 1.1em; border-right: solid 1px #d4d4d4; color: #000;'>2922 Avenue East, Arlington,<br /> TX, 76011 </td>" +
-                "<td style='padding: 25px; text-align: center; font-size: 1.1em; color: #000;'><a href='https://www.facebook.com/uacadvertising/' target='_blank'>Check out our Facebook ></a></td></tr></body>";
+                "<td style='padding: 25px; text-align: center; font-size: 1.1em; color: #000;'><a href='https://www.facebook.com/uacadvertising/' target='_blank'>Check out our Facebook ></a></td></tr></table></table></body>";
             message.Html = String.Format(body, FirstName);
 
             var username = ConfigurationManager.AppSettings["sendGridUser"];
@@ -228,6 +228,69 @@ namespace UniversalAdcom.Controllers
             transportWeb.DeliverAsync(message);
 
             return RedirectToAction("HowItWorks", "Home");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult HowCanWeHelp(HowCanWeHelpYou model)
+        {
+            if (ModelState.IsValid)
+            {
+                var message = new SendGridMessage();
+
+                message.AddTo("chrisg@universalad.com");
+                message.From = new MailAddress("connerg@uac4u.com");
+                message.Subject = "How Can We Help You?";
+
+                var body = "<body><table style='background-color: #d4d4d4; width: 100%;'><table style='width: 80%; border: solid 2px #000; padding: 15px; background-color: #fff; margin:  0 auto;'>" +
+                "<th style='padding: 5px; font-size: 28px;'>How Can We Help You Message</th>" +
+                "<tr><td>Inquiry From Uac4u.com<td></tr>" +
+                "<tr><td>{0}</td></tr>" +
+                "<tr><td>{1} - {2}</td></tr>" +
+                "<tr><td>{3}</td></tr></table></table></body>";
+                message.Html = String.Format(body, model.Name, model.CountryPrefix, model.Phone, model.Email);
+
+                var username = ConfigurationManager.AppSettings["sendGridUser"];
+                var pswd = ConfigurationManager.AppSettings["sendGridPassword"];
+
+                var credentials = new NetworkCredential(username, pswd);
+                var transportWeb = new Web(credentials);
+
+                transportWeb.DeliverAsync(message);
+
+                return RedirectToAction("HowCanWeHelpEmail", "Home", new { model.Name, model.Email });
+            }
+            return View();
+
+        }
+
+        public ActionResult HowCanWeHelpEmail(string Name, string Email)
+        {
+            var redirectmessage = new SendGridMessage();
+            redirectmessage.AddTo(Email);
+            redirectmessage.From = new MailAddress("connerg@uac4u.com");
+            redirectmessage.Subject = "How Can We Help You?";
+            var body = "<body><table style='width: 100%; background-color: #d4d4d4;'><table style='margin: 0 auto; border: solid 2px #000; background-color: #fff;'><th colspan='2' style='padding: 5px; font-size: 2em;'>How Can We Help You?</th>" +
+                "<tr><td colspan='2' style='padding: " +
+                "5px'>Hello {0},</td></tr>" +
+                "<tr><td colspan='2' style='padding: 5px'>To better help our team provide's you with the best assistance possible.</td></tr>" +
+                "<tr><td colspan='2' style='padding: 5px;'>Someone from our sales department will be in contact with you soon.<td style='padding: 5px;'></td></tr>" +
+                "<tr><td colspan='2' style='padding: 5px'>Thank You For Choosing UAC!</td>" +
+                "</tr>" +
+                "<tr><td colspan='2' padding: 5px'><img style='width: 100%; padding: 5px' src='https://lh3.googleusercontent.com/hzmvYoaCY1MlABiQ0x6OG2aamoksGvFw1iK_ow2P8MRv7SHik-G_M-L-_gdz4gCoyZJjOZYUG-rgTvarS4OI_NwpkLEtKXYF6RlDW2jnEwyMIH9IjIYuKbB8OZz-CHc0PS_sq3Nfjg2iymtiaw208D6NJf6eydIk9Dc4wULqzJ1P4aJbgLY_L8reMNKDsIgN1ImtQHqx8XnmRqPRdCkxQMrK5NEdr1A95_-vcRI_XvU7IcsPQHGpEpj6TAHJ_5hS7aHVeFkfEIpq1BY2HK8Hz14ZTHlwm-L8GCdJJ4k60p6aoNpffpI_6R4qRTh_5WTMksYlXhRcAdZxcIBSiJAkxb_1CsStlvFKg7ygqq7t3J8F5O2PmklsIfwNDmV7BvDnO6vGpXDCiehqM5qWxtBxsWgIL0L1BQiGcjy87T-AetcvMpTiljEG87k4gNx72mZu97qY8aPn3KA496niq7NvA1iLgWa5p-3JaNpipah7YkHFtoQKvQwDhG91BNDZ1fykDgPSUbxUWbrGOZHJdQTyGUIV3DtS15TjT9vUzEQZ0rsF3OIMtWuamJOqpTvGjIWV-FZomxeokO0aNa0VBnphTCFVwVOutTGv0Xt-8A=w700-h642-no'></td></tr>" +
+                "<tr><td style='padding: 25px; text-align: center; font-size: 1.1em; border-right: solid 1px #d4d4d4; color: #000;'>2922 Avenue East, Arlington,<br /> TX, 76011 </td>" +
+                "<td style='padding: 25px; text-align: center; font-size: 1.1em; color: #000;'><a href='https://www.facebook.com/uacadvertising/' target='_blank'>Check out our Facebook ></a></td></tr></table></table></body>";
+            redirectmessage.Html = String.Format(body, Name);
+
+            var username = ConfigurationManager.AppSettings["sendGridUser"];
+            var pswd = ConfigurationManager.AppSettings["sendGridPassword"];
+
+            var credentials = new NetworkCredential(username, pswd);
+            var transportWeb = new Web(credentials);
+
+            transportWeb.DeliverAsync(redirectmessage);
+
+            return RedirectToAction("Contact", "Home");
         }
     }
 }

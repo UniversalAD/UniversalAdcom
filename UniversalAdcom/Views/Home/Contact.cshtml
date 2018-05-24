@@ -1,17 +1,106 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<section class="contact-page">
+    <div class="row">
+        <div class="col-lg-11 center-block">
+            <img src="@Url.Content("/Content/Images/Contact/contact-us-banner.png")" class="img-responsive" />
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-7 col-lg-7 center-block">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a data-target="#freeartworkmodal" data-toggle="modal">
+                    <img src="@Url.Content("/Content/Images/Contact/free-icon.png")" class="img-responsive center-block" /><p class="text-center">Request Your Free<br /> Ad Copy!</p>
+                    <p class="text-center">Get Started</p>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a  data-toggle="modal" data-target="#howcanwehelp"><img src="@Url.Content("/Content/Images/Contact/question-cube.png")" class="img-responsive center-block" /><p class="text-center">I'm a Customer and Have a Question</p><p class="text-center">Help Me Out</p></a>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3"><a data-target="#campaign" data-toggle="modal"><img src="@Url.Content("/Content/Images/Contact/more-info.png")" class="img-responsive center-block" /><p class="text-center">I'm Almost a Customer & Want Some More Info</p><p class="text-center">Send Me Something</p></a></div>
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a data-target="#howcanwehelp" data-toggle="modal"><img src="@Url.Content("/Content/Images/Contact/houston-we-have-a-problem.png")" class="img-responsive center-block" /><p class="text-center">Houston,<br /> We Have a Problem</p><p class="text-center">Help Me Out</p></a>
+            </div>
+        </div>
+    </div>
+</section>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<section class="contact-page img-block-parallax"></section>
+
+<section class="address">
+    <div class="row">
+        <div class="col-xs-12 col-sm-9 col-md-7 col-lg-7 center-block">
+            <div class="col-xs-12 col-sm-5 col-sm-push-1 col-md-5 col-md-push-1 col-lg-5 col-lg-push-1">
+                <h5>Corporate Headquarters</h5>
+                <p>Arlington TX</p>
+                <p>817.617.2750</p>
+                <br />
+                <h6>Hours</h6>
+                <p>Monday - Thursday: 8:00 <small>am</small> - 4:45 pm</p>
+                <p>Every Single Friday: 8:00 am - 12:00 pm</p>
+                <br />
+                <h6>Contact Us: <a data-toggle="modal" data-target="#howcanwehelp"><span>salesadmin@uac4u.com</span></a></h6>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-sm-push-1 col-md-5 col-md-push-1 col-lg-5 col-lg-push-2">
+                <h5>General Contact</h5>
+                <p>Davenport, IA Sales Office: 800-501-4143</p>
+                <p>Fort Worth, TX Sales Office: 800-786-0264</p>
+                <p>Peoria, IL Sale Office: 800-779-0268</p>
+                <p>Arlington TX Sales Office: 844-800-2321</p>
+                <br />
+                <h5>Customer Service</h5>
+                <p>Toll-Free / Human-Answered - <span>1-844-800-2321</span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="partners">
+    <div class="row">
+        <div class="col-xs-12 col-sm-9 col-md-7 col-lg-7 center-block">
+            <img src="@Url.Content("/Content/Images/Contact/uac-our-family-log.png")" class="img-responsive center-block" />
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <img src="@Url.Content("/Content/Images/Contact/fanfare.png")" class="img-responsive center-block" />
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <img src="@Url.Content("/Content/Images/Contact/scoreboard.png")" class="img-responsive center-block" />
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <img src="@Url.Content("/Content/Images/Contact/pizza-solutions.png")" class="img-resposive center-block" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-9  col-md-4 col-lg-4"><img src="@Url.Content("/Content/Images/Contact/map-company.png")" class="img-responsive center-block" /></div>
+                <div class="col-xs-12 col-sm-9  col-md-4 col-lg-4">
+                    <img src="@Url.Content("/Content/Images/Contact/hometown-products.png")" class="img-responsive center-block" />
+                </div>
+                <div class="col-xs-12 col-sm-9  col-md-4 col-lg-4">
+                    <img src="@Url.Content("/Content/Images/Contact/premier-impressions.png")" class="img-responsive center-block" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-9  col-md-4 col-lg-4">
+                    <img src="@Url.Content("/Content/Images/Contact/radio-promos.png")" class="img-responsive center-block" />
+                </div>
+                <div class="col-xs-12 col-sm-9  col-md-4 col-lg-4">
+                    <img src="@Url.Content("/Content/Images/Contact/totes-2-go.png")" class="img-responsive center-block" />
+                </div>
+                <div class="col-xs-12 col-sm-9  col-md-4 col-lg-4">
+                    <img src="@Url.Content("/Content/Images/Contact/event-guru.png")" class="img-responsive center-block" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@Html.Partial("_FreeArtworkModal")
+@Html.Partial("_HowCanWeHelpModal")
+@Html.Partial("_CampaignContactPartial")
+
+
+@section Scripts {
+    <script>     
+        $("#howcanwehelpform").validate();
+    </script>
+    }
