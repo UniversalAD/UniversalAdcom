@@ -1,0 +1,44 @@
+﻿@model UniversalAdcom.Models.HowCanWeHelpYou
+
+<section class="howcanwehelpmodal">
+    <div class="modal fade" id="howcanwehelp" data-attribute="howcanwehelp" role="dialog" tabindex="1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col-md-12 center-block">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title text-center red">How Can We Help?</h4>
+                            <p class="text-center">We're ready to answer any questions you may have!</p>
+                            <p class="text-center"><small>Our customer service team is standing by to help you with whatever you may need.</small></p>
+                        </div>
+                        <div class="modal-body">
+                            @using (@Html.BeginForm("HowCanWeHelp", "Home", FormMethod.Post, new { @id = "howcanwehelpform" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Name", required = "required" })
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.DropDownListFor(m => m.CountryPrefix, UniversalAdcom.Models.Extensions.GetPrefixList(), new { @class = "form-control", required = "required", Value = "0" })
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", required = "required", placeholder = "Phone" })
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email", required = "required", type = "email" })
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-lg-3 no-gutters">
+                                            <input type="submit" value="Send" class="btn btn-default red">
+                                        </div>
+                                    </div>
+                                </div>}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
