@@ -23,10 +23,11 @@
 
 <section class="different-products m-top-25 m-bottom-25">
     <div class="row row-max">
-        <div class="col-xs-12 col-lg-10 center-block">
-            <div class="col-sm-6 col-md-6 col-lg-6 m-bottom-25">
+        <div class="col-xs-11 col-lg-11 center-block">
+            <h2>Popular Products</h2>
+            <div class="col-sm-6 col-md-3 col-lg-3 m-bottom-25 no-gutters">
                 <div class="hover-box" data-target="#maps">
-                    <img src="@Url.Content("/Content/Images/Products/Product-Page-Art_01.png")" class="img-responsive" />
+                    <img src="@Url.Content("http://via.placeholder.com/275x275")" class="img-responsive" />
                     <div class="hover-content" id="maps">
                         <h4 class="text-center">Magnets & Maps</h4>
                         <p class="text-center">Make an impression that sticks and directs customers to your brand on a daily basis!</p>
@@ -34,9 +35,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-6 col-lg-6 m-bottom-25">
+            <div class="col-sm-6 col-md-3 col-lg-3 m-bottom-25 no-gutters">
                 <div class="hover-box" data-target="#apparel">
-                    <img src="@Url.Content("/Content/Images/Products/Product-Page-Art_03.png")" class="img-responsive" />
+                    <img src="@Url.Content("http://via.placeholder.com/275x275")" class="img-responsive" />
                     <div class="hover-content" id="apparel">
                         <h4 class="text-center">Apparel</h4>
                         <p class="text-center">Deck your business out in the most comfortable form of advertising out there!</p>
@@ -44,9 +45,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-6 col-lg-6 m-bottom-25">
+            <div class="col-sm-6 col-md-3 col-lg-3 m-bottom-25 no-gutters">
                 <div class="hover-box" data-target="#bags">
-                    <img src="@Url.Content("/Content/Images/Products/Product-Page-Art_05.png")" class="img-responsive" />
+                    <img src="@Url.Content("http://via.placeholder.com/275x275")" class="img-responsive" />
                     <div class="hover-content" id="bags">
                         <h4 class="text-center">Bags</h4>
                         <p class="text-center">Carry your referral business to the next level with these awesome eco-friendly totes. </p>
@@ -54,9 +55,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-6 col-lg-6 m-bottom-25">
+            <div class="col-sm-6 col-md-3 col-lg-3 m-bottom-25 no-gutters">
                 <div class="hover-box" data-target="#drinkware">
-                    <img src="@Url.Content("/Content/Images/Products/Product-Page-Art_07.png")" class="img-responsive" />
+                    <img src="@Url.Content("http://via.placeholder.com/275x275")" class="img-responsive" />
                     <div class="hover-content" id="drinkware">
                         <h4 class="text-center">Drinkware</h4>
                         <p class="text-center">Keep your brand cool and hydrate your business with these awesome products.</p>
@@ -68,58 +69,78 @@
     </div>
 </section>
 
-<section class="kitchen img-block-parallax">
-    <div class="row">
-        <div class="col-xs-11 col-sm-9 col-md-6 col-lg-6 center-block no-gutters">
-            <div class="block-wrap">
-                <h5 class="text-center">DID YOU KNOW?</h5>
-            </div>            
-            <ul div class="col-xs-11 col-sm-10 col-md-9 col-lg-8 center-block">
-                <li>
-                    Businesses who advertise inside
-                    the home are more likely to gain
-                    a customers repeat business.
-                </li>
-                <li>The Refrigerator is considered by many to be the Television of the Kitchen.</li>
-                <li>Customers keep promotional items because of their usability and helpfulness.</li>
-            </ul>
-            <div class="btn-wrapper col-xs-9 col-sm-7 col-md-5 col-lg-5 center-block">
-                @Html.ActionLink("I'm ready. Sign Me Up.", null, null, new { @class="btn btn-default red"})
+<section class="promotional-ad">
+    <div class="row row-max">
+        <div class="col-xs-12 col-lg-11 center-block">
+            <img src="@Url.Content("http://via.placeholder.com/2100x125")" class="img-responsive" />
+            <div class="row relative m-top-25">
+                <img src="@Url.Content("http://via.placeholder.com/2100x600")" class="img-responsive" />
+                <button type="button" class="btn btn-default">Button</button>
             </div>
         </div>
     </div>
 </section>
 
-<section class="premier-products">
-    <h4 class="text-center">Premier Products</h4>
-    <div class="row">
-        <div class="col-xs-11 col-sm-6 col-sm-push-5 col-md-5 col-md-push-6 col-lg-4 col-lg-push-7 no-gutters">
-            <div class="block-wrap">
-                <h5 class="text-center">TOP PRODUCTS</h5>
+<section class="prodDesc m-top-50" ng-app="prodDesc">
+    <div class="row row-max" ng-controller="prodDescController">
+        <div class="col-lg-11 center-block">
+            <div class="product-slick">
+                <div data-target="#productDesc" data-toggle="modal" ng-click="magnets()"><img src="@Url.Content("http://via.placeholder.com/300x300")" class="img-responsive" /></div>
+                <div data-target="#productDesc" data-toggle="modal" ng-click="totes()"><img src="@Url.Content("http://via.placeholder.com/300x300")" class="img-responsive" /></div>
+                <div data-target="#productDesc" data-toggle="modal" ng-click="cups()"><img src="@Url.Content("http://via.placeholder.com/300x300")" class="img-responsive" /></div>
+                <div data-target="#productDesc" data-toggle="modal" ng-click="shirts()"><img src="@Url.Content("http://via.placeholder.com/300x300")" class="img-responsive" /></div>
+                <div data-target="#productDesc" data-toggle="modal" ng-click="koosie()"><img src="@Url.Content("http://via.placeholder.com/300x300")" class="img-responsive" /></div>
+                <div data-target="#productDesc" data-toggle="modal" ng-click="backpacks()"><img src="@Url.Content("http://via.placeholder.com/300x300")" class="img-responsive" /></div>
             </div>
-            <p class="text-center col-xs-11 col-sm-10 col-md-9 col-lg-8 center-block">There's An Instant Attraction With Out Magnets!</p>
-            <div class="btn-wrapper col-xs-5 col-sm-5 col-md-5 col-lg-4 center-block">
-                @Html.ActionLink("See More", null, null, new { @class = "btn btn-default red" })
-            </div>
-        </div>
+        </div>       
+        @Html.Partial("_ProductDescPartial")
     </div>
 </section>
 
-<section class="premier-products">
-    <div class="red-bar"></div>
-    <div class="row tote">
-        <div class="col-xs-11 col-sm-6 col-sm-push-1 col-md-5 col-md-push-1 col-lg-4 col-lg-push-1 no-gutters">
-            <div class="block-wrap">
-                <h5 class="text-center">TOP PRODUCTS</h5>
-            </div>
-            <p class="text-center col-xs-11 col-sm-10 col-md-9 col-lg-8 center-block">It's In The Bag With These TOTE BAGS!</p>
-            <div class="btn-wrapper col-xs-5 col-sm-5 col-md-5 col-lg-4 center-block">
-                @Html.ActionLink("See More", null, null, new { @class = "btn btn-default red" })
-            </div>
-        </div>
-    </div>
-</section> 
+
 
 @section Scripts {
     @Scripts.Render("~/Scripts/ProductHover.js")
+    @Scripts.Render("~/Controllers/ProductController.js")
+
+    <script>
+        $('.product-slick').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }             
+            ]
+        });
+    </script>
+
+    <script>
+        $(".thumb").click(function () {
+
+        });
+    </script>
 }
