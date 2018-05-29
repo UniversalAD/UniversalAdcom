@@ -19,12 +19,20 @@ namespace UniversalAdcom
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                "~/Scripts/angular.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/slick").Include(
+               "~/Scripts/Slick/slick.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/Slick/slick.css",
+                      "~/Content/Slick/slick-theme.css",
                       "~/Content/site.css"));
         }
     }

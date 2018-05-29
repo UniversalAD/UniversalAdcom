@@ -1243,6 +1243,43 @@ label.error {
   font-weight: normal;
   font-style: normal; }
 
+.proddesc .modal-dialog {
+  width: 100%;
+  max-width: 1024px; }
+  .proddesc .modal-dialog .close {
+    margin-top: -30px; }
+
+.proddesc .modal-body h4 {
+  font-size: 24px; }
+
+.proddesc .modal-body h5 {
+  font-size: 22px;
+  border-bottom: solid 1px #d4d4d4; }
+
+.proddesc img {
+  width: 100%; }
+  .proddesc img.thumb {
+    margin-top: 10px;
+    padding-right: 5px; }
+
+@font-face {
+  font-family: 'ralewayregular';
+  src: url("Fonts/raleway-regular-webfont.woff2") format("woff2"), url("Fonts/raleway-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaybold';
+  src: url("Fonts/raleway-bold-webfont.woff2") format("woff2"), url("Fonts/raleway-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ralewaysemibold';
+  src: url("Fonts/raleway-semibold-webfont.woff2") format("woff2"), url("Fonts/raleway-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 .products-page.video:after {
   content: '';
   position: absolute;
@@ -1292,16 +1329,23 @@ label.error {
       .products-page.video .products .padding-left {
         padding: 0; } }
 
+.different-products h2 {
+  border-bottom: solid 1px #d4d4d4; }
+
 .different-products img {
   margin: 0 auto;
   object-position: 0 8px; }
+  @media (max-width: 975px) and (min-width: 480px) {
+    .different-products img {
+      min-width: 357px;
+      height: 100%; } }
 
 .different-products .hover-box {
   position: relative;
   width: 100%;
   height: 100%;
   max-width: 357px;
-  max-height: 245px;
+  max-height: 275px;
   margin: 0 auto;
   cursor: pointer; }
   .different-products .hover-box:hover {
@@ -1309,15 +1353,15 @@ label.error {
     .different-products .hover-box:hover:after {
       content: '';
       position: absolute;
-      top: 0;
+      top: 8px;
       width: 100%;
-      height: 100%;
+      height: 97%;
       background-color: rgba(0, 0, 0, 0.8); }
   .different-products .hover-box .hover-content {
     position: absolute;
-    top: 0;
+    top: 8px;
     width: 80%;
-    height: 100%;
+    height: 97%;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 100;
@@ -1340,165 +1384,65 @@ label.error {
     .different-products .hover-box .hover-content .btn-default {
       margin: 0 auto; }
 
-.kitchen.img-block-parallax {
-  background-image: url("/Content/Images/Products/Kitchen-photo.png");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 600px;
-  max-height: 600px; }
+.different-products .no-gutters {
+  padding-right: 10px; }
+
+.promotional-ad .btn {
+  position: absolute;
+  bottom: 40px;
+  right: 40px; }
+
+.prodDesc .product-slick .slick-slide {
+  padding: 4px;
+  cursor: pointer; }
   @media (max-width: 480px) {
-    .kitchen.img-block-parallax {
-      height: 100%;
-      max-height: none; } }
+    .prodDesc .product-slick .slick-slide {
+      padding: 0; } }
+  @media (max-width: 480px) {
+    .prodDesc .product-slick .slick-slide img {
+      margin: 0 auto; } }
 
-.kitchen ul {
-  padding-left: 10px; }
-  @media (min-width: 1350px) {
-    .kitchen ul {
-      margin-top: 55px; } }
-  .kitchen ul li {
-    position: relative;
-    font-size: 1.7em;
-    color: #045184;
-    margin: 25px 0;
-    padding: 0 15px; }
-    @media (min-width: 1350px) {
-      .kitchen ul li {
-        margin-top: 40px;
-        margin-bottom: 40px; } }
-    .kitchen ul li:before {
-      content: '';
-      position: absolute;
-      left: -10px;
-      top: 9px;
-      width: 15px;
-      height: 15px;
-      background-color: #283866;
-      border-radius: 50%; }
-    .kitchen ul li:after {
-      content: '';
-      position: absolute;
-      bottom: -15px;
-      left: 50%;
-      transform: translate(-50%, 0);
-      width: 100%;
-      max-width: 330px;
-      height: 3px;
-      background-color: #FF0000; }
-      @media (min-width: 1350px) {
-        .kitchen ul li:after {
-          bottom: -25px; } }
-
-.kitchen .btn-wrapper {
-  padding-top: 25px; }
-  @media (min-width: 1350px) {
-    .kitchen .btn-wrapper {
-      padding-top: 40px; } }
-  .kitchen .btn-wrapper .btn {
+.prodDesc .product-slick .slick-prev {
+  left: -45px;
+  transform: rotate(45deg); }
+  @media (max-width: 1025px) {
+    .prodDesc .product-slick .slick-prev {
+      display: none !important; } }
+  .prodDesc .product-slick .slick-prev:after {
+    content: '';
+    position: absolute;
+    left: 1px;
     width: 100%;
-    max-width: none; }
-
-.kitchen .no-gutters {
-  background-color: rgba(255, 255, 255, 0.7);
-  height: 600px;
-  max-width: 710px;
-  padding-bottom: 25px; }
-  @media (max-width: 767px) {
-    .kitchen .no-gutters {
-      height: 100%;
-      padding-bottom: 45px; } }
-
-.premier-products h4 {
-  font-size: 3em; }
-
-.premier-products .red-bar {
-  width: 100%;
-  height: 65px;
-  background-color: #FF0000; }
-
-.premier-products .row {
-  background-image: url("/Content/Images/Products/Fridge-ad-promo.png");
-  background-size: cover;
-  background-position: -30px;
-  height: 100%;
-  width: 100%; }
-  @media (min-width: 1350px) {
-    .premier-products .row {
-      background-position: -50px; } }
-  @media (max-width: 900px) {
-    .premier-products .row {
-      background-position: 0; } }
-  .premier-products .row.tote {
-    background-image: url("/Content/Images/Products/tote-bag-ad-promo.png");
-    background-position: center; }
-    @media (min-width: 1350px) {
-      .premier-products .row.tote {
-        background-position: -10px; } }
-
-.premier-products p {
-  color: #283866;
-  font-size: 2.5em;
-  padding: 55px 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold; }
-
-.premier-products .no-gutters {
-  background-color: #fff;
-  padding-bottom: 25px;
-  max-width: 605px; }
-  @media (max-width: 767px) {
-    .premier-products .no-gutters {
-      margin: 0 auto;
-      display: block;
-      float: none; } }
-
-@media (max-width: 767px) {
-  .premier-products .btn {
-    margin: 0 auto; } }
-
-.block-wrap {
-  position: relative;
-  background-color: #213d4d;
-  height: 75px;
-  width: 100%; }
-  .block-wrap:after {
+    height: 100%;
+    border-right: 2px solid #000; }
+  .prodDesc .product-slick .slick-prev:before {
     content: '';
     position: absolute;
-    bottom: -9px;
-    right: 0;
-    width: 1%;
-    height: 14px;
-    background-color: #213d4d;
-    transform: skew(0deg, -50deg); }
-    @media (max-width: 480px) {
-      .block-wrap:after {
-        width: 2%; } }
-  .block-wrap:before {
-    content: '';
-    position: absolute;
-    bottom: -9px;
     left: 0;
-    width: 1%;
-    height: 14px;
-    background-color: #213d4d;
-    transform: skew(0deg, 50deg); }
-    @media (max-width: 480px) {
-      .block-wrap:before {
-        width: 2%; } }
-  .block-wrap h5 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     width: 100%;
-    color: #fff;
-    font-size: 3em;
-    transform: translate(-50%, -50%);
-    margin-top: 0;
-    margin-bottom: 0; }
-    @media (max-width: 480px) {
-      .block-wrap h5 {
-        font-size: 11vw; } }
+    height: 100%;
+    border-top: 2px solid #000; }
+
+.prodDesc .product-slick .slick-next {
+  right: -45px;
+  transform: rotate(-45deg); }
+  @media (max-width: 1025px) {
+    .prodDesc .product-slick .slick-next {
+      display: none !important; } }
+  .prodDesc .product-slick .slick-next:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid #000; }
+  .prodDesc .product-slick .slick-next:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #000; }
 
 @font-face {
   font-family: 'ralewayregular';
