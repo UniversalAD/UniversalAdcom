@@ -74,9 +74,18 @@
 
 .different-products {
 
+    h2 {
+        border-bottom: solid 1px #d4d4d4;
+    }
+
     img {
         margin: 0 auto;
         object-position: 0 8px;
+
+        @media (max-width: 975px) and (min-width: 480px) {
+            min-width: 357px;
+            height: 100%;
+        }
     }
 
     .hover-box {
@@ -84,7 +93,7 @@
         width: 100%;
         height: 100%;
         max-width: 357px;
-        max-height: 245px;
+        max-height: 275px;
         margin: 0 auto;
         cursor: pointer;
 
@@ -94,18 +103,18 @@
             &:after {
                 content: '';
                 position: absolute;
-                top: 0;
+                top: 8px;
                 width: 100%;
-                height: 100%;
+                height: 97%;
                 background-color: rgba(0,0,0,.8);
             }
         }
 
         .hover-content {
             position: absolute;
-            top: 0;
+            top: 8px;
             width: 80%;
-            height: 100%;
+            height: 97%;
             left: 50%;
             transform: translate(-50%, 0);
             z-index: 100;
@@ -137,211 +146,91 @@
             }
         }
     }
+
+    .no-gutters {
+        padding-right: 10px;
+    }
 }
 
-.kitchen {
+.promotional-ad {
 
-    &.img-block-parallax {
-        background-image: url("/Content/Images/Products/Kitchen-photo.png");
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 600px;
-        max-height: 600px;
+    .btn {
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+    }  
+}
 
-        @media (max-width: 480px) {
-            height: 100%;
-            max-height: none;
-        }
-    }
+.prodDesc {
+    .product-slick {
 
-    ul {
-        padding-left: 10px;
+        .slick-slide {
+            padding: 4px;
+            cursor: pointer;
 
-        @media (min-width: 1350px) {
-            margin-top: 55px;
-        }
-
-        li {
-            position: relative;
-            font-size: 1.7em;
-            color: #045184;
-            margin: 25px 0;
-            padding: 0 15px;
-
-            @media (min-width: 1350px) {
-                margin-top: 40px;
-                margin-bottom: 40px;
+            @media (max-width: 480px) {
+                padding: 0;
             }
 
-            &:before {
-                content: '';
-                position: absolute;
-                left: -10px;
-                top: 9px;
-                width: 15px;
-                height: 15px;
-                background-color: #283866;
-                border-radius: 50%;
+            img {
+                @media (max-width: 480px) {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .slick-prev {
+            left: -45px;
+            transform: rotate(45deg);
+
+            @media (max-width: 1025px) {
+                display: none !important;
             }
 
             &:after {
                 content: '';
                 position: absolute;
-                bottom: -15px;
-                left: 50%;
-                transform: translate(-50%, 0);
+                left: 1px;
                 width: 100%;
-                max-width: 330px;
-                height: 3px;
-                background-color: $red;
+                height: 100%;
+                border-right: 2px solid #000;
+            }
 
-                @media (min-width: 1350px) {
-                    bottom: -25px;
-                }
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-top: 2px solid #000;
             }
         }
-    }
 
-    .btn-wrapper {
-        padding-top: 25px;
+        .slick-next {
+            right: -45px;
+            transform: rotate(-45deg);
 
-        @media (min-width: 1350px) {
-            padding-top: 40px;
-        }
-
-        .btn {
-            width: 100%;
-            max-width: none;
-        }
-    }
-
-    .no-gutters {
-        background-color: rgba(255,255,255,.7);
-        height: 600px;
-        max-width: 710px;
-        padding-bottom: 25px;
-
-        @media (max-width: 767px) {
-            height: 100%;
-            padding-bottom: 45px;
-        }
-    }
-}
-
-.premier-products {
-
-    h4 {
-        font-size: 3em;
-    }
-
-    .red-bar {
-        width: 100%;
-        height: 65px;
-        background-color: $red;
-    }
-
-    .row {
-        background-image: url("/Content/Images/Products/Fridge-ad-promo.png");
-        background-size: cover;
-        background-position: -30px;
-        height: 100%;
-        width: 100%;
-
-        @media (min-width: 1350px) {
-            background-position: -50px;
-        }
-
-        @media (max-width: 900px) {
-            background-position: 0;
-        }
-
-        &.tote {
-            background-image: url("/Content/Images/Products/tote-bag-ad-promo.png");
-            background-position: center;
-
-            @media (min-width: 1350px) {
-                background-position: -10px;
+            @media (max-width: 1025px) {
+                display: none !important;
             }
-        }
-    }
 
-    p {
-        color: #283866;
-        font-size: 2.5em;
-        padding: 55px 0;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-    }
+            &:after {
+                content: '';
+                position: absolute;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-left: 2px solid #000;
+            }
 
-    .no-gutters {
-        background-color: #fff;
-        padding-bottom: 25px;
-        max-width: 605px;
-
-        @media (max-width: 767px) {
-            margin: 0 auto;
-            display: block;
-            float: none;
-        }
-    }
-
-    .btn {
-        @media (max-width: 767px) {
-            margin: 0 auto;
-        }
-    }
-}
-
-.block-wrap {
-    position: relative;
-    background-color: rgba(33, 61, 77, 1);
-    height: 75px;
-    width: 100%;
-
-    &:after {
-        content: '';
-        position: absolute;
-        bottom: -9px;
-        right: 0;
-        width: 1%;
-        height: 14px;
-        background-color: #213d4d;
-        transform: skew(0deg, -50deg);
-
-        @media (max-width: 480px) {
-            width: 2%;
-        }
-    }
-
-    &:before {
-        content: '';
-        position: absolute;
-        bottom: -9px;
-        left: 0;
-        width: 1%;
-        height: 14px;
-        background-color: #213d4d;
-        transform: skew(0deg, 50deg);
-
-        @media (max-width: 480px) {
-            width: 2%;
-        }
-    }
-
-    h5 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 100%;
-        color: $white;
-        font-size: 3em;
-        transform: translate(-50%, -50%);
-        margin-top: 0;
-        margin-bottom: 0;
-
-        @media (max-width: 480px) {
-            font-size: 11vw;
+            &:before {
+                content: '';
+                position: absolute;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-top: 2px solid #000;
+            }
         }
     }
 }
