@@ -2,5 +2,9 @@
   {
     "outputFile": "Content/Site.css",
     "inputFile": "Content/Site.scss"
-  }  
+  },
+  {
+    "outputFile": "Controllers/ProductController.es5.js",
+    "inputFile": "Controllers/ProductController.js"
+  }
 ]
