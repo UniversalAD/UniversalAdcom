@@ -1,6 +1,5 @@
 ﻿<section class="headerVideo container-fluid relative">
-    <video autoplay loop src="@Url.Content("/Content/Video/UacBuildingVideo.mp4")" type="video/mp4">
-    </video>
+    <video autoplay loop src="@Url.Content("/Content/Video/UacBuildingVideo.mp4")" type="video/mp4"></video>
     <div class="row">
         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 center-block">
             <h1 class="text-center font-white">The Advertising Specialists</h1>
@@ -10,8 +9,12 @@
             <div class="col-xs-10 col-sm-5 col-md-5 col-md-push-1 col-lg-4 easiest">
                 <h5>The easiest, most effective way to build your business just got simpler.</h5>
                 <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-md-5 col-lg-6"><button class="btn red btn-default">Start Here</button></div>
-                    <div class="col-xs-6 col-sm-6 col-md-5 col-md-pull-1 col-lg-6"><button class="btn white btn-default">Learn More</button></div>
+                    <div class="col-xs-6 col-sm-6 col-md-5 col-lg-6">
+                        @Html.ActionLink("Start Here", "HowItWorks", "Home", null, new { @class = "btn btn-default red" })
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-5 col-md-pull-1 col-lg-6">             
+                        @Html.ActionLink("Learn More", "About", "Home", null, new { @class = "btn btn-default white" })
+                    </div>
                 </div>
             </div>
         </div>
@@ -21,7 +24,7 @@
                     <span class="chevron"></span>
                 </li>
                 <li class="text-center">
-                <span class="chevron"></span>
+                    <span class="chevron"></span>
                 </li>
             </ul>
         </div>
