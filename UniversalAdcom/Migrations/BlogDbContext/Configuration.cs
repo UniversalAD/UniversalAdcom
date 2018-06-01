@@ -70,10 +70,10 @@ namespace UniversalAdcom.Migrations.BlogDbContext
             context.PostCategories.AddOrUpdate(new Models.PostCategory { PostId = "3", CategoryId = "cat3" });
             context.PostCategories.AddOrUpdate(new Models.PostCategory { PostId = "4", CategoryId = "cat4" });
 
-            context.PostVideos.AddOrUpdate(new Models.PostVideo { Id = 1, PostId = "1", VideoSiteName = "YouTube", VideoUrl = "https://www.youtube.com/watch?v=9m9oO84Q2fk", VideoThumbnail = "https://www.youtube.com/watch?v=9m9oO84Q2fk", });
-            context.PostVideos.AddOrUpdate(new Models.PostVideo { Id = 2, PostId = "2", VideoSiteName = "YouTube", VideoUrl = "https://www.youtube.com/watch?v=9m9oO84Q2fk", VideoThumbnail = "https://www.youtube.com/watch?v=9m9oO84Q2fk", });
-            context.PostVideos.AddOrUpdate(new Models.PostVideo { Id = 3, PostId = "3", VideoSiteName = "YouTube", VideoUrl = "https://www.youtube.com/watch?v=9m9oO84Q2fk", VideoThumbnail = "https://www.youtube.com/watch?v=9m9oO84Q2fk", });
-            context.PostVideos.AddOrUpdate(new Models.PostVideo { Id = 4, PostId = "4", VideoSiteName = "YouTube", VideoUrl = "https://www.youtube.com/watch?v=9m9oO84Q2fk", VideoThumbnail = "https://www.youtube.com/watch?v=9m9oO84Q2fk", });
+            context.PostVideos.AddOrUpdate(new Models.PostVideo { Id = 1, PostId = "1", VideoSiteName = "YouTube", VideoUrl = "https://www.youtube.com/watch?v=9m9oO84Q2fk", VideoThumbnail = "http://i3.ytimg.com/vi/9m9oO84Q2fk/maxresdefault.jpg", });
+            context.PostVideos.AddOrUpdate(new Models.PostVideo { Id = 2, PostId = "2", VideoSiteName = "YouTube", VideoUrl = "https://www.youtube.com/watch?v=9m9oO84Q2fk", VideoThumbnail = "http://i3.ytimg.com/vi/9m9oO84Q2fk/maxresdefault.jpg", });
+            context.PostVideos.AddOrUpdate(new Models.PostVideo { Id = 3, PostId = "3", VideoSiteName = "YouTube", VideoUrl = "https://www.youtube.com/watch?v=9m9oO84Q2fk", VideoThumbnail = "http://i3.ytimg.com/vi/9m9oO84Q2fk/maxresdefault.jpg", });
+            context.PostVideos.AddOrUpdate(new Models.PostVideo { Id = 4, PostId = "4", VideoSiteName = "YouTube", VideoUrl = "https://www.youtube.com/watch?v=9m9oO84Q2fk", VideoThumbnail = "http://i3.ytimg.com/vi/9m9oO84Q2fk/maxresdefault.jpg", });
             }
     }
 }
