@@ -7,6 +7,7 @@ using UniversalAdcom.DAL;
 using UniversalAdcom.Models;
 using PagedList;
 using PagedList.Mvc;
+using System.ServiceModel.Syndication;
 
 namespace UniversalAdcom.Controllers
 {
@@ -233,6 +234,36 @@ namespace UniversalAdcom.Controllers
             return View("AllPosts", allPostsList.ToPagedList(pageNumber, pageSize));
         }
         #endregion Posts/AllPosts
+
+        #region Rss
+        public ActionResult Feed()
+        {
+            var blogTitle = "Your Blog Title";
+            var blogDescription = "Your Blog Description";
+            var blogUrl = "http://yourblog.com";
+
+            var post = _blogRepository.GetPosts().Select(
+                p => new SyndicationItem(
+                    p.Title,
+                    p.ShortDescription,
+                    new Uri(blogUrl)
+                    )
+            );
+
+            //Create an instance of SyndicationFeed class passing to SyndicationItem Collection
+            var feed = new SyndicationFeed(blogTitle, blogDescription, new Uri(blogUrl), post)
+            {
+                Copyright = new TextSyndicationContent(string.Format("Copyright @ {0}", blogTitle)),
+                Language = "en-US"
+            };
+
+            // Format Feed is RSS format through Rss20FeedFormatter formatter
+            var feedFormatter = new Rss20FeedFormatter(feed);
+
+            return new FeedResult(feedFormatter);
+
+        }
+        #endregion Rss
 
         #region Helper
         public IList<Post> GetPosts()

@@ -80,6 +80,7 @@
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -228,6 +229,7 @@
     <Compile Include="Models\BlogViewModels.cs" />
     <Compile Include="Models\CampaigeContact.cs" />
     <Compile Include="Models\Extensions.cs" />
+    <Compile Include="Models\FeedResult.cs" />
     <Compile Include="Models\FreeArtworkContact.cs" />
     <Compile Include="Models\HowCanWeHelpYou.cs" />
     <Compile Include="Models\IdentityModels.cs" />

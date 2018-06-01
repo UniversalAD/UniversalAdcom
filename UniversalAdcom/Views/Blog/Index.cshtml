@@ -35,7 +35,11 @@
                             <input type="search" name="searchString" value="@ViewBag.CurrentSearchString" placeholder="Search" />
                             <input type="submit" value="&#128270;" style="background: none; border: none;" />
                         }
-                        <div style="margin: 10px"><a href="@Url.Action("AllPost", "Blog")" style="text-decoration: none; color: blue;" title="Post">Post Likes</a></div>
+                        @{ 
+                            var rssUrl = Request.Url.Scheme + "://" + Request.Url.Host + "/Blog/Feed";
+                        }
+                        <div style="margin: 10px"><a href="@Url.Action("AllPosts", "Blog")" style="text-decoration: none; color: blue;" title="Post">All Posts</a></div>
+                        <div style="margin: 10px"><a href="@rssUrl" style="text-decoration: none; color: blue;" title="rssUrl">Rss Feed</a></div>
                         <div style="color: blue; cursor: pointer; float: left; width: 300px; margin: 10px;" id="indexFilterBtn">Filter</div>
                     </div>
                     @using (Html.BeginForm("Index", "Blog", FormMethod.Get, new { @class = "indexFilterForm" }))
