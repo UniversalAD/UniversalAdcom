@@ -36,11 +36,15 @@
                             <li>@Html.ActionLink("Products", "Products", "Home")</li>
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                             <li>@Html.ActionLink("Media", "Index", "Blog")</li>
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
+                            }
                         </ul>
                     </div>
                 </div>
             </div>
-            @*@Html.Partial("_LoginPartial")*@
+            @Html.Partial("_LoginPartial")
         </div>
     </div>
 </div>
