@@ -308,6 +308,16 @@
     <Content Include="Content\Images\Pizza\Pizza-Page_Product.png" />
     <Content Include="Content\Images\Pizza\pizza-slice-dog-costume-8876.jpg" />
     <Content Include="Content\Images\Pizza\slices_bg_02.png" />
+    <Content Include="Content\Images\post\add.png" />
+    <Content Include="Content\Images\post\comment.png" />
+    <Content Include="Content\Images\post\delete.png" />
+    <Content Include="Content\Images\post\dislike.png" />
+    <Content Include="Content\Images\post\downvote.png" />
+    <Content Include="Content\Images\post\edit.png" />
+    <Content Include="Content\Images\post\like.png" />
+    <Content Include="Content\Images\post\remove.png" />
+    <Content Include="Content\Images\post\report.png" />
+    <Content Include="Content\Images\post\upvote.png" />
     <Content Include="Content\Images\Products\Fridge-ad-promo.png" />
     <Content Include="Content\Images\Products\Items\kitty.png" />
     <Content Include="Content\Images\Products\Kitchen-photo.png" />
@@ -1236,6 +1246,23 @@
     <Content Include="Views\Blog\Index.cshtml" />
     <Content Include="Views\Blog\Posts.cshtml" />
     <Content Include="Views\Blog\AllPosts.cshtml" />
+    <Content Include="Views\Blog\Post.cshtml" />
+    <Content Include="Views\Blog\EditPost.cshtml" />
+    <Content Include="Views\Blog\AddVideoToPost.cshtml" />
+    <Content Include="Views\Blog\AddCategoryToPost.cshtml" />
+    <Content Include="Views\Blog\AddNewCategory.cshtml" />
+    <Content Include="Views\Blog\AddTagToPost.cshtml" />
+    <Content Include="Views\Blog\AddNewTag.cshtml" />
+    <Content Include="Views\Blog\CategoriesAndTags.cshtml" />
+    <Content Include="Views\Blog\DeletePost.cshtml" />
+    <Content Include="Views\Blog\AddNewPost.cshtml" />
+    <Content Include="Views\Blog\Comments.cshtml" />
+    <Content Include="Views\Blog\ChildReplies.cshtml" />
+    <Content Include="Views\Blog\DeleteComment.cshtml" />
+    <Content Include="Views\Blog\DeleteReply.cshtml" />
+    <Content Include="Views\Blog\EditComment.cshtml" />
+    <Content Include="Views\Blog\EditReply.cshtml" />
+    <Content Include="Views\Blog\Replies.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

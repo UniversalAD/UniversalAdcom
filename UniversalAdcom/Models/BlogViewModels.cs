@@ -11,17 +11,17 @@ namespace UniversalAdcom.Models
     public class Post
     {
         public string Id { get; set; }
-        [Required]      
+        [Required]
         [Display(Name = "Title")]
         public string Title { get; set; }
         [Required]
-        [Display(Name = "ShortDescription")]      
+        [Display(Name = "ShortDescription")]
         public string ShortDescription { get; set; }
         [Required]
-        [Display(Name = "Body")]       
+        [Display(Name = "Body")]
         public string Body { get; set; }
         [Required]
-        [Display(Name = "Meta")]       
+        [Display(Name = "Meta")]
         public string Meta { get; set; }
         [Required]
         [Display(Name = "UrlSeo")]
@@ -38,9 +38,7 @@ namespace UniversalAdcom.Models
         public ICollection<PostTag> PostTags { get; set; }
         public ICollection<PostVideo> PostVideos { get; set; }
         public ICollection<PostLike> PostLikes { get; set; }
-
     }
-
     public class Category
     {
         public string Id { get; set; }
@@ -50,13 +48,12 @@ namespace UniversalAdcom.Models
         [Required]
         [Display(Name = "UrlSeo")]
         public string UrlSeo { get; set; }
-        [Required]       
+        [Required]
         [Display(Name = "Description")]
         public string Description { get; set; }
         public bool Checked { get; set; }
         public ICollection<PostCategory> PostCategories { get; set; }
     }
-
     public class PostCategory
     {
         [Key]
@@ -70,15 +67,15 @@ namespace UniversalAdcom.Models
         public bool Checked { get; set; }
         public Post Post { get; set; }
         public Category Category { get; set; }
-    }
 
+    }
     public class Comment
     {
         public string Id { get; set; }
-        public string PostId { get; set; }
+        public string PageId { get; set; }
         public DateTime DateTime { get; set; }
         public string UserName { get; set; }
-        [Required]       
+        [Required]
         public string Body { get; set; }
         [DefaultValue(0)]
         public int NetLikeCount { get; set; }
@@ -86,18 +83,17 @@ namespace UniversalAdcom.Models
         public bool Deleted { get; set; }
         public Post Post { get; set; }
         public ICollection<Reply> Replies { get; set; }
+
         public ICollection<CommentLike> CommentLikes { get; set; }
     }
-
     public class Reply
     {
         public string Id { get; set; }
-        public string PostId { get; set; }
         public string CommentId { get; set; }
         public string ParentReplyId { get; set; }
         public DateTime DateTime { get; set; }
         public string UserName { get; set; }
-        [Required]      
+        [Required]
         public string Body { get; set; }
         [DefaultValue(false)]
         public bool Deleted { get; set; }
@@ -105,7 +101,6 @@ namespace UniversalAdcom.Models
         public Comment Comment { get; set; }
         public ICollection<ReplyLike> ReplyLikes { get; set; }
     }
-
     public class Tag
     {
         public string Id { get; set; }
@@ -113,12 +108,12 @@ namespace UniversalAdcom.Models
         [Display(Name = "Name")]
         public string Name { get; set; }
         [Required]
-        [Display(Name = "UrlSeo")]       
+        [Display(Name = "UrlSeo")]
         public string UrlSeo { get; set; }
+
         public bool Checked { get; set; }
         public ICollection<PostTag> PostTags { get; set; }
     }
-
     public class PostTag
     {
         [Key]
@@ -128,53 +123,55 @@ namespace UniversalAdcom.Models
         [Key]
         [Column(Order = 1)]
         public string TagId { get; set; }
+
         public bool Checked { get; set; }
         public Post Post { get; set; }
         public Tag Tag { get; set; }
-    }
 
+    }
     public class PostVideo
     {
         public int Id { get; set; }
         [Required]
         [Display(Name = "VideoUrl")]
-        [DataType(DataType.Url)]
         public string VideoUrl { get; set; }
         public string VideoThumbnail { get; set; }
         public string PostId { get; set; }
         public string VideoSiteName { get; set; }
-        public Post Post { get; set; }
-    }
 
+        public Post Post { get; set; }
+
+    }
     public class PostLike
     {
         [Key]
         public string PostId { get; set; }
-        public string UserName { get; set; }
+        public string Username { get; set; }
         public bool Like { get; set; }
         public bool Dislike { get; set; }
+
         public Post Post { get; set; }
     }
-
     public class CommentLike
     {
         [Key]
         public string CommentId { get; set; }
-        public string UserName { get; set; }
+        public string Username { get; set; }
         public bool Like { get; set; }
-        public bool DisLike { get; set; }
+        public bool Dislike { get; set; }
         public Comment Comment { get; set; }
     }
     public class ReplyLike
     {
         [Key]
         public string ReplyId { get; set; }
-        public string UserName { get; set; }
+        public string Username { get; set; }
         public bool Like { get; set; }
-        public bool DisLike { get; set; }
+        public bool Dislike { get; set; }
         public Reply Reply { get; set; }
 
     }
+
 
     public class BlogViewModel
     {
@@ -192,6 +189,8 @@ namespace UniversalAdcom.Models
         public IList<Category> PostCategories { get; set; }
         public IList<Tag> PostTags { get; set; }
         public string UrlSlug { get; set; }
+        public CommentViewModel CommentViewModel { get; set; }
+        public PagedList.IPagedList<BlogViewModel> PagedBlogViewModel { get; set; }
     }
 
     public class AllPostsViewModel
@@ -208,4 +207,45 @@ namespace UniversalAdcom.Models
         public string UrlSlug { get; set; }
     }
 
+    public class PostViewModel
+    {
+        public string Body { get; set; }
+        public string FirstPostId { get; set; }
+        public string ID { get; set; }
+        public string LastPostId { get; set; }
+        public string NextPostSlug { get; set; }
+        public int PostCount { get; set; }
+        public int PostDislikes { get; set; }
+        public int PostLikes { get; set; }
+        public string PreviousPostSlug { get; set; }
+        public string Title { get; set; }
+        public IList<PostVideo> Videos { get; set; }
+        public IList<Tag> PostTags { get; set; }
+        public string Meta { get; set; }
+        public string UrlSeo { get; set; }
+        public IList<Category> PostCategories { get; set; }
+        public string ShortDescription { get; set; }
+        public IList<Category> Categories { get; set; }
+        public IList<Tag> Tags { get; set; }
+
+        public CommentViewModel CommentViewModel { get; set; }
+    }
+    public class CommentViewModel
+    {
+        public CommentViewModel() { }
+        public CommentViewModel(Comment comment)
+        {
+            Comment = comment;
+        }
+        public IList<Comment> Comments { get; set; }
+        public string ID { get; set; }
+        public Comment Comment { get; set; }
+        public string UrlSeo { get; set; }
+        public DateTime DateTime { get; set; }
+        public IList<CommentViewModel> ChildReplies { get; set; }
+        public string Body { get; set; }
+        public string Id { get; set; }
+        public string ParentReplyId { get; set; }
+        public string UserName { get; set; }
+    }
 }

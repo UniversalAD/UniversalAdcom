@@ -1,0 +1,18 @@
+﻿@model UniversalAdcom.Models.Comment
+
+@{
+    ViewBag.Title = "Edit Comment";
+}
+
+<div class="newComment">
+    @using (Html.BeginForm("EditComment", "Blog", FormMethod.Post, new { @class = "comTextdivParent", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <textarea name="commentBody" id="editComment">@Model.Body</textarea>       
+        <div class="comTextSub">
+            <input name="commentid" value="@Model.Id" type="hidden" />
+            <input class="comTextBtn" type="submit" value="&#x27a5;" />
+        </div>
+
+    }
+</div>
