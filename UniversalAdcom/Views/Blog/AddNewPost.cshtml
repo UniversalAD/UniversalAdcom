@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Add New Post";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @using (Html.BeginForm("AddNewPost", "Blog", FormMethod.Post, new { role = "form" }))
@@ -28,13 +29,19 @@
             <tr>
                 <td>ShortDescription :</td>
                 <td colspan="2" class="editPostDesc">
-                    @Html.TextAreaFor(m => m.ShortDescription, new { @id = "editor1", Value = Model.ShortDescription })                  
+                    @Html.TextAreaFor(m => m.ShortDescription, new { @id = "editor1", Value = Model.ShortDescription })
+                    <script>
+                        CKEDITOR.replace('editor1');
+                    </script>
                 </td>
             </tr>
             <tr>
                 <td>Body :</td>
                 <td colspan="2" class="editPostBody">
-                    @Html.TextAreaFor(m => m.Body, new { @id = "editor2", Value = Model.Body })                   
+                    @Html.TextAreaFor(m => m.Body, new { @id = "editor2", Value = Model.Body })
+                    <script>
+                        CKEDITOR.replace('editor2');
+                    </script>
                 </td>
             </tr>
             <tr>

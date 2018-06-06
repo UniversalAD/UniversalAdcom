@@ -1,7 +1,8 @@
 ﻿@model PagedList.IPagedList<UniversalAdcom.Models.BlogViewModel>
-@using PagedList;
 @using PagedList.Mvc;
-@using UniversalAdcom.Controllers;
+@using UniversalAdcom.Controllers
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+
 
 @{
     BlogController blogCtrl = new BlogController();
@@ -14,11 +15,11 @@
             <th>Sort by :</th>
             <th>
                 @using (Html.BeginForm("Index", "Blog", FormMethod.Get))
+            {
+                if (ViewBag.CurrentSearchCategory != null)
                 {
-                    if (ViewBag.CurrentSearchCategory != null)
+                    foreach (var item in ViewBag.CurrentSearchCategory)
                     {
-                        foreach (var item in ViewBag.CurrentSearchCategory)
-                        {
                             <input type="hidden" name="searchCategory" value="@item" />
                         }
                     }
@@ -36,11 +37,11 @@
             </th>
             <th class="tableTitle">
                 @using (Html.BeginForm("Index", "Blog", FormMethod.Get))
+            {
+                if (ViewBag.CurrentSearchCategory != null)
                 {
-                    if (ViewBag.CurrentSearchCategory != null)
+                    foreach (var item in ViewBag.CurrentSearchCategory)
                     {
-                        foreach (var item in ViewBag.CurrentSearchCategory)
-                        {
                             <input type="hidden" name="searchCategory" value="@item" />
                         }
                     }
@@ -128,7 +129,7 @@
             </table>
         }
     </div>
-}
+                }
 
 <div id="spacer"></div>
 <div class="paging">

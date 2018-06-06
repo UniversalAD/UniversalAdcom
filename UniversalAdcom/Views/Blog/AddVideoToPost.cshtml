@@ -1,7 +1,7 @@
 ﻿@model UniversalAdcom.Models.PostViewModel
-
 @{
     ViewBag.Title = "Add Video";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @using (Html.BeginForm("AddVideoToPost", "Blog", FormMethod.Post, new { role = "form" }))
@@ -14,4 +14,3 @@
         <input class="addVidBtn" type="submit" value="&#x27a5;" />
     </div>
 }
-

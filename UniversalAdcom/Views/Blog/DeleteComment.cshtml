@@ -1,7 +1,8 @@
-﻿@model UniversalAdcom.Models.Comment
+﻿@model UniversalAdcom.Models.CommentViewModel
 
 @{
-    ViewBag.Title = "Delete Comment";
+    ViewBag.Title = "DeleteComment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @using (Html.BeginForm("DeleteComment", "Blog", FormMethod.Post, new { @role = "form" }))
@@ -17,3 +18,4 @@
         </div>
     </div>
 }
+

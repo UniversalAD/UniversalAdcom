@@ -1,11 +1,6 @@
 ﻿@model UniversalAdcom.Models.CommentViewModel
 @using UniversalAdcom.Controllers
 @using Microsoft.AspNet.Identity
-
-@{
-    ViewBag.Title = "Replies";
-}
-
 @{
     BlogController blgCtrl = new BlogController();
     var parentReplies = Model.Comment.Replies;
@@ -32,10 +27,8 @@
                         <div class="userImage"><img src="@prDetails[1]" height="50" width="50" /></div>
                         <div class="commentUserName"><strong>@prDetails[0]</strong>&nbsp;&nbsp;<span class="cmntTime">-- @prDetails[2]</span></div>
                         <div class="commentDate">@prDetails[3]</div>
-
                         <div class="commentExp" id="@prDetails[7]">
                             <div class="commentBody">@Html.Raw(pReply.Body)</div>
-
                             @if (!blgCtrl.ReplyDeleteCheck(pReply.Id))
                             {
                                 <div class="replySubMenu">
@@ -67,7 +60,6 @@
                                     <table class="newComment collapseComment">
                                         <tr>
                                             <td style="width:50px;vertical-align: top;"><div class="comImg"><img src="@imgUrl" height="50" width="50" /></div></td>
-
                                             <td style="vertical-align:middle; min-height:40px;" class="comText" id="@prDetails[12]">
                                                 @using (Html.BeginForm("NewChildReply", "Blog", FormMethod.Post, new { @class = "comTextdivParent", role = "form" }))
                                                 {
@@ -100,7 +92,6 @@
                                     </table>
                                 }
                             }
-
                         </div>
                     </div>
                     <div class="commentreplies" id="@prDetails[6]">

@@ -2,7 +2,6 @@
 @using UniversalAdcom.Controllers
 @using Microsoft.AspNet.Identity
 
-
 @foreach (var childReply in Model)
 {
     if (childReply != null)
@@ -63,7 +62,14 @@
                                         @using (Html.BeginForm("NewChildReply", "Blog", FormMethod.Post, new { @class = "comTextdivParent", role = "form" }))
                                         {
                                             @Html.AntiForgeryToken()
-                                            <textarea name="replyBody" id="@crDetails[13]"></textarea> <div class="comTextSub">
+                                            <textarea name="replyBody" id="@crDetails[13]"></textarea>
+                                            <script>
+                                            CKEDITOR.replace('@crDetails[13]',
+                                                {
+                                                    customConfig: '/Scripts/ckEditorConfig1.js'
+                                                });
+                                            </script>
+                                            <div class="comTextSub">
                                                 <input type="hidden" value="@childReply.Id" name="preplyid" id="preplyid" />
                                                 <input type="hidden" value="@User.Identity.GetUserName()" name="comUserName" id="comUserName" />
                                                 <input class="comTextBtn" type="submit" value="&#x27a5;" />
@@ -97,4 +103,5 @@
         </div>
     }
 }
+
 

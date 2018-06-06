@@ -2,8 +2,8 @@
 
 @{
     ViewBag.Title = "AddNewTag";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 @using (Html.BeginForm("AddNewTag", "Blog", FormMethod.Post, new { role = "form" }))
 {
     @Html.AntiForgeryToken()
@@ -27,4 +27,3 @@
         </tr>
     </table>
 }
-

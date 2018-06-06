@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace UniversalAdcom.Models
@@ -247,5 +245,8 @@ namespace UniversalAdcom.Models
         public string Id { get; set; }
         public string ParentReplyId { get; set; }
         public string UserName { get; set; }
+        public Post PageId { get; set; }
     }
+
+
 }

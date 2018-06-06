@@ -27,7 +27,6 @@ namespace UniversalAdcom.Controllers
         private ApplicationUserManager _userManager;
 
 
-
         public BlogController()
         {
             _blogRepository = new BlogRepository(new BlogDbContext());
@@ -326,7 +325,7 @@ namespace UniversalAdcom.Controllers
         }
 
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult EditPost(string slug)
         {
@@ -335,7 +334,7 @@ namespace UniversalAdcom.Controllers
         }
 
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
@@ -354,7 +353,7 @@ namespace UniversalAdcom.Controllers
         }
 
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult AddVideoToPost(string postid, string slug)
         {
@@ -365,7 +364,7 @@ namespace UniversalAdcom.Controllers
         }
 
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult AddVideoToPost(string postid, string slug, string videoUrl)
@@ -376,7 +375,7 @@ namespace UniversalAdcom.Controllers
         }
 
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult RemoveVideoFromPost(string slug, string postid, string videoUrl)
         {
             CreatePostViewModel(slug);
@@ -385,7 +384,7 @@ namespace UniversalAdcom.Controllers
         }
 
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult AddCategoryToPost(string postid)
         {
@@ -395,7 +394,7 @@ namespace UniversalAdcom.Controllers
             return View(model);
         }
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult AddCategoryToPost(PostViewModel model)
@@ -435,7 +434,7 @@ namespace UniversalAdcom.Controllers
             return RedirectToAction("EditPost", new { slug = post.UrlSeo });
         }
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult RemoveCategoryFromPost(string slug, string postid, string catName)
         {
             CreatePostViewModel(slug);
@@ -444,7 +443,7 @@ namespace UniversalAdcom.Controllers
         }
 
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult AddNewCategory(string postid, bool callfrompost)
         {
@@ -460,7 +459,7 @@ namespace UniversalAdcom.Controllers
             }
         }
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult AddNewCategory(string postid, string catName, string catUrlSeo, string catDesc)
@@ -478,7 +477,7 @@ namespace UniversalAdcom.Controllers
         }
 
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult AddTagToPost(string postid)
         {
@@ -489,7 +488,7 @@ namespace UniversalAdcom.Controllers
         }
 
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult AddTagToPost(PostViewModel model)
@@ -529,7 +528,7 @@ namespace UniversalAdcom.Controllers
             return RedirectToAction("EditPost", new { slug = post.UrlSeo });
         }
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult RemoveTagFromPost(string slug, string postid, string tagName)
         {
             CreatePostViewModel(slug);
@@ -538,7 +537,7 @@ namespace UniversalAdcom.Controllers
         }
 
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult AddNewTag(string postid, bool callfrompost)
         {
@@ -554,7 +553,7 @@ namespace UniversalAdcom.Controllers
             }
         }
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult AddNewTag(string postid, string tagName, string tagUrlSeo)
@@ -572,7 +571,7 @@ namespace UniversalAdcom.Controllers
         }
 
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult CategoriesAndTags()
         {
@@ -583,7 +582,7 @@ namespace UniversalAdcom.Controllers
         }
 
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult RemoveCatAndTag(string[] categoryNames, string[] tagNames)
@@ -609,7 +608,7 @@ namespace UniversalAdcom.Controllers
 
 
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult DeletePost(PostViewModel model, string postid)
         {
@@ -619,7 +618,7 @@ namespace UniversalAdcom.Controllers
 
 
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult DeletePost(string postId)
@@ -630,7 +629,7 @@ namespace UniversalAdcom.Controllers
 
 
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult AddNewPost()
         {
@@ -660,7 +659,7 @@ namespace UniversalAdcom.Controllers
         }
 
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
@@ -844,6 +843,7 @@ namespace UniversalAdcom.Controllers
             }
             else
             {
+                TempData["comment"] = commentBody;
                 return RedirectToAction("Index", "Blog");
             }
         }
@@ -1118,8 +1118,6 @@ namespace UniversalAdcom.Controllers
             return _blogRepository.ReplyDeleteCheck(replyid);
         }
 
-
-
         public static string TimePassed(DateTime postDate)
         {
             string date = null;
@@ -1252,27 +1250,6 @@ namespace UniversalAdcom.Controllers
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         public IList<Post> GetPosts()
         {
             return _blogRepository.GetPosts();
@@ -1317,7 +1294,6 @@ namespace UniversalAdcom.Controllers
             model.ShortDescription = post.ShortDescription;
             return model;
         }
-
 
         #endregion
     }

@@ -1,9 +1,9 @@
-﻿using System;
+﻿using UniversalAdcom.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UniversalAdcom.Models;
 
 namespace UniversalAdcom.DAL
 {
@@ -441,6 +441,7 @@ namespace UniversalAdcom.DAL
             return _context.Comments.Where(x => x.Id == commentId).Select(x => x.PageId).FirstOrDefault();
         }
 
+
         public IList<Comment> GetComments()
         {
             return _context.Comments.ToList();
@@ -460,6 +461,8 @@ namespace UniversalAdcom.DAL
             Save();
         }
 
+
+
         public Comment GetCommentById(string id)
         {
             return _context.Comments.Where(p => p.Id == id).FirstOrDefault();
@@ -478,11 +481,16 @@ namespace UniversalAdcom.DAL
             Save();
         }
 
+
+
+
         public void Save()
         {
             _context.SaveChanges();
         }
 
+
+        #region dispose
         private bool disposed = false;
         protected virtual void Dispose(bool disposing)
         {
@@ -501,10 +509,8 @@ namespace UniversalAdcom.DAL
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+
+        #endregion dispose
     }
 
 }
-
-
-
-

@@ -7,7 +7,6 @@
             <a href="@Url.Action("Index", "Home")" class="show-for-small float-right">
                 <img src="@Url.Content("~/Content/Images/Logo.png")" />
             </a>
-            </a>
         </div>
         <div class="container-fluid slide-container">
             <div class="row">
@@ -38,13 +37,14 @@
                             <li>@Html.ActionLink("Media", "Index", "Blog")</li>
                             @if (User.IsInRole("Admin"))
                             {
-                                <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
+                            <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
                             }
                         </ul>
                     </div>
                 </div>
             </div>
-            @Html.Partial("_LoginPartial")
         </div>
     </div>
 </div>
+@Html.Partial("_LoginPartial")
+

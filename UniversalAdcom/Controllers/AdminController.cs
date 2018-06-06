@@ -21,7 +21,7 @@ namespace UniversalAdcom.Controllers
         // Controllers
 
         // GET: /Admin/
-        [Authorize(Roles = "Admin")]
+      //  [Authorize(Roles = "Admin")]
         #region public ActionResult Index(string searchStringUserNameOrEmail)
         public ActionResult Index(string searchStringUserNameOrEmail, string currentFilter, int? page, RegisterViewModel model)
         {
@@ -101,7 +101,7 @@ namespace UniversalAdcom.Controllers
         // Users *****************************
 
         // GET: /Admin/Edit/Create 
-        [Authorize(Roles = "Admin")]
+      //  [Authorize(Roles = "Admin")]
         #region public ActionResult Create()
         public ActionResult Create()
         {
@@ -114,7 +114,7 @@ namespace UniversalAdcom.Controllers
         #endregion
 
         // PUT: /Admin/Create
-        [Authorize(Roles = "Admin")]
+      //  [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         #region public ActionResult Create(ExpandedUserDTO paramExpandedUserDTO)
@@ -179,7 +179,7 @@ namespace UniversalAdcom.Controllers
         #endregion
 
         // GET: /Admin/Edit/TestUser 
-        [Authorize(Roles = "Admin")]
+      //  [Authorize(Roles = "Admin")]
         #region public ActionResult EditUser(string UserName)
         public ActionResult EditUser(string UserName)
         {
@@ -197,7 +197,7 @@ namespace UniversalAdcom.Controllers
         #endregion
 
         // PUT: /Admin/EditUser
-        [Authorize(Roles = "Admin")]
+      //  [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         #region public ActionResult EditUser(ExpandedUserDTO paramExpandedUserDTO)
@@ -228,7 +228,7 @@ namespace UniversalAdcom.Controllers
         #endregion
 
         // DELETE: /Admin/DeleteUser
-        [Authorize(Roles = "Admin")]
+      //  [Authorize(Roles = "Admin")]
         #region public ActionResult DeleteUser(string UserName)
         public ActionResult DeleteUser(string UserName)
         {
@@ -269,7 +269,7 @@ namespace UniversalAdcom.Controllers
         #endregion
 
         // GET: /Admin/EditRoles/TestUser 
-        [Authorize(Roles = "Admin")]
+      //  [Authorize(Roles = "Admin")]
         #region ActionResult EditRoles(string UserName)
         public ActionResult EditRoles(string UserName)
         {
@@ -296,7 +296,7 @@ namespace UniversalAdcom.Controllers
         #endregion
 
         // PUT: /Admin/EditRoles/TestUser 
-        [Authorize(Roles = "Admin")]
+      //  [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         #region public ActionResult EditRoles(UserAndRolesDTO paramUserAndRolesDTO)
@@ -337,7 +337,7 @@ namespace UniversalAdcom.Controllers
         #endregion
 
         // DELETE: /Admin/DeleteRole?UserName="TestUser&RoleName=Administrator
-        [Authorize(Roles = "Admin")]
+      //  [Authorize(Roles = "Admin")]
         #region public ActionResult DeleteRole(string UserName, string RoleName)
         public ActionResult DeleteRole(string UserName, string RoleName)
         {
@@ -392,7 +392,7 @@ namespace UniversalAdcom.Controllers
         // Roles *****************************
 
         // GET: /Admin/ViewAllRoles
-        [Authorize(Roles = "Admin")]
+      //  [Authorize(Roles = "Admin")]
         #region public ActionResult ViewAllRoles()
         public ActionResult ViewAllRoles()
         {
@@ -414,7 +414,7 @@ namespace UniversalAdcom.Controllers
         #endregion
 
         // GET: /Admin/AddRole
-        [Authorize(Roles = "Admin")]
+      //  [Authorize(Roles = "Admin")]
         #region public ActionResult AddRole()
         public ActionResult AddRole()
         {
@@ -425,7 +425,7 @@ namespace UniversalAdcom.Controllers
         #endregion
 
         // PUT: /Admin/AddRole
-        [Authorize(Roles = "Admin")]
+      //  [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         #region public ActionResult AddRole(RoleDTO paramRoleDTO)
@@ -467,7 +467,7 @@ namespace UniversalAdcom.Controllers
         #endregion
 
         // DELETE: /Admin/DeleteUserRole?RoleName=TestRole
-        [Authorize(Roles = "Admin")]
+      //  [Authorize(Roles = "Admin")]
         #region public ActionResult DeleteUserRole(string RoleName)
         public ActionResult DeleteUserRole(string RoleName)
         {

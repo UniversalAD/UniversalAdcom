@@ -1,13 +1,8 @@
-﻿@model UniversalAdcom.Models.CommentViewModel
+﻿@model CommentViewModel
 @using UniversalAdcom.Models
 @using UniversalAdcom.Controllers
 @using Microsoft.AspNet.Identity
 @using System.Web
-
-@{
-    ViewBag.Title = "Comments";
-}
-
 <div class="bottomContainer">
     <div class="commentContainer">
         <div class="commHeader">
@@ -26,21 +21,28 @@
         <hr />
         @if (Request.IsAuthenticated)
         {
-            var imgUrl = Url.Content("~/Content/images/profile/" + User.Identity.GetUserName() + ".png") + "?time=" + DateTime.Now.ToString();
+            //var imgUrl = Url.Content("~/Content/images/profile/" + User.Identity.GetUserName() + ".png") + "?time=" + DateTime.Now.ToString();
             BlogController blgCtrl = new BlogController();
             var ncmDetails = blgCtrl.NewCommentDetails(User.Identity.GetUserName());
             <table class="newComment">
                 <tr>
-                    <td style="width:50px;vertical-align: top;"><div class="comImg"><img src="@imgUrl" height="50" width="50" /></div></td>
+                    @*<td style="width:50px;vertical-align: top;"><div class="comImg"><img src="@imgUrl" height="50" width="50" /></div></td>*@
                     <td style="vertical-align:middle; min-height:40px;" class="comText" id="@ncmDetails[0]">
                         @using (Html.BeginForm("NewComment", "Blog", FormMethod.Post, new { @class = "comTextdivParent", role = "form" }))
                         {
                             @Html.AntiForgeryToken()
                             <textarea name="commentBody" id="@ncmDetails[1]"></textarea>
+                            <script>
+                                CKEDITOR.replace('@ncmDetails[1]',
+                                    {
+                                        customConfig: '/Scripts/ckEditorConfig1.js'
+                                    });
 
+                            </script>
                             <div class="comTextSub">
                                 <input value="@Model.UrlSeo" name="slug" type="hidden" />
                                 <input value="@Model.ID" name="pageid" type="hidden" />
+                                <input value="@Model.PageId" name="pageid" type="hidden" />
                                 <input value="@User.Identity.GetUserName()" name="comUserName" type="hidden" />
                                 <input class="comTextBtn" type="submit" value="&#x27a5;" />
                             </div>
@@ -107,10 +109,17 @@
                                             {
                                                 @Html.AntiForgeryToken()
                                                 <textarea name="replyBody" id="@cmDetails[13]"></textarea>
+                                                <script>
+                                                    CKEDITOR.replace('@cmDetails[13]',
+                                                        {
+                                                            customConfig: '/Scripts/ckEditorConfig1.js'
+                                                        });
+                                                </script>
                                                 <div class="comTextSub">
                                                     <input value="@comment.Id" name="commentid" type="hidden" />
                                                     <input value="@Model.UrlSeo" name="slug" type="hidden" />
                                                     <input value="@Model.ID" name="pageid" type="hidden" />
+                                                    <input value=""
                                                     <input value="@User.Identity.GetUserName()" name="comUserName" type="hidden" />
                                                     <input class="comTextBtn" type="submit" value="&#x27a5;" />
                                                 </div>
