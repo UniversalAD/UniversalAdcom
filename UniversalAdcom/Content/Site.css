@@ -1627,3 +1627,13 @@ body {
 .body-content {
   margin-top: 39px; }
 
+.register ul {
+  margin-top: 0; }
+  .register ul li {
+    margin-top: 0;
+    font-size: 18px; }
+
+.register .password {
+  width: 170px;
+  max-width: none; }
+

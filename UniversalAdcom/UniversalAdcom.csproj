@@ -1829,6 +1829,7 @@
     <Content Include="Views\Admin\ViewAllRoles.cshtml" />
     <Content Include="Views\Blog\Comments.cshtml" />
     <Content Include="Views\Blog\Replies.cshtml" />
+    <Content Include="Views\Shared\Info.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

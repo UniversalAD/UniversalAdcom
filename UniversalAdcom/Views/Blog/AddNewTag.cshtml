@@ -1,5 +1,4 @@
 ﻿@model UniversalAdcom.Models.PostViewModel
-
 @{
     ViewBag.Title = "AddNewTag";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,23 +6,29 @@
 @using (Html.BeginForm("AddNewTag", "Blog", FormMethod.Post, new { role = "form" }))
 {
     @Html.AntiForgeryToken()
-    <table class="newCatCont">
-        <tr>
-            <td>Name :</td>
-            <td><input class="newCatInp" type="text" name="tagName" /></td>
-        </tr>
-        <tr>
-            <td>UrlSeo :</td>
-            <td><input class="newCatInp" type="text" name="tagUrlSeo" /></td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                @if (Model != null)
-                {
-                    <input type="hidden" value="@Model.ID" name="postid" />
-                }
-                <input class="newCatBtn" type="submit" value="&#x27a5;" />
-            </td>
-        </tr>
-    </table>
+    <section>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-2">
+                <table class="newCatCont">
+                    <tr>
+                        <td>Name :</td>
+                        <td><input class="newCatInp" type="text" name="tagName" /></td>
+                    </tr>
+                    <tr>
+                        <td>UrlSeo :</td>
+                        <td><input class="newCatInp" type="text" name="tagUrlSeo" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            @if (Model != null)
+                            {
+                                <input type="hidden" value="@Model.ID" name="postid" />
+                            }
+                            <input class="newCatBtn" type="submit" value="&#x27a5;" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
 }

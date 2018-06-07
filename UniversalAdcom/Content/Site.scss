@@ -9,4 +9,20 @@ body {
     margin-top: 39px;
 }
 
+.register {
+    ul {
+        margin-top: 0;
+
+        li {
+            margin-top: 0;
+            font-size: 18px;
+        }
+    }
+
+    .password {
+        width: 170px;
+        max-width: none;
+    }
+}
+
 
