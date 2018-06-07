@@ -33,6 +33,7 @@ namespace UniversalAdcom
                       "~/Content/bootstrap.css",
                       "~/Content/Slick/slick.css",
                       "~/Content/Slick/slick-theme.css",
+                      "~/Content/PagedList.css",
                       "~/Content/site.css"));
         }
     }
