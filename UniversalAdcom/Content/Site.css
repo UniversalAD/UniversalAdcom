@@ -205,10 +205,12 @@ label.error {
   .user-controls li {
     display: block;
     margin-bottom: 2px;
-    background-color: #273866;
+    background-color: #6f77b6;
     padding: 5px; }
     .user-controls li:nth-of-type(1) {
       background-color: #FF0000; }
+    .user-controls li:nth-of-type(2) {
+      background-color: #273866; }
     .user-controls li a {
       color: #fff;
       font-size: 38px; }
@@ -1387,19 +1389,12 @@ label.error {
   border-bottom: solid 1px #d4d4d4; }
 
 .different-products img {
-  margin: 0 auto;
-  object-position: 0 8px; }
-  @media (max-width: 975px) and (min-width: 480px) {
-    .different-products img {
-      min-width: 357px;
-      height: 100%; } }
+  margin: 0 auto; }
 
 .different-products .hover-box {
   position: relative;
   width: 100%;
   height: 100%;
-  max-width: 357px;
-  max-height: 275px;
   margin: 0 auto;
   cursor: pointer; }
   .different-products .hover-box:hover {
@@ -1407,31 +1402,42 @@ label.error {
     .different-products .hover-box:hover:after {
       content: '';
       position: absolute;
-      top: 8px;
+      top: 0;
       width: 100%;
-      height: 97%;
+      height: 100%;
       background-color: rgba(0, 0, 0, 0.8); }
   .different-products .hover-box .hover-content {
     position: absolute;
-    top: 8px;
-    width: 80%;
-    height: 97%;
+    width: 60%;
+    height: 60%;
     left: 50%;
-    transform: translate(-50%, 0);
+    top: 50%;
+    transform: translate(-50%, -50%);
     z-index: 100;
     display: none; }
+    @media (max-width: 768px) {
+      .different-products .hover-box .hover-content {
+        width: 98%;
+        height: 100%; } }
     .different-products .hover-box .hover-content h4 {
       padding: 10px 0;
-      font-size: 1.7em;
+      font-size: 4em;
       color: #fff; }
+      @media (max-width: 1024px) {
+        .different-products .hover-box .hover-content h4 {
+          font-size: 3em;
+          padding: 0; } }
       @media (max-width: 375px) {
         .different-products .hover-box .hover-content h4 {
           margin-bottom: 5px;
           padding: 5px 0; } }
     .different-products .hover-box .hover-content p {
       padding: 10px 0;
-      font-size: 1.3em;
+      font-size: 1.8em;
       color: #fff; }
+      @media (max-width: 1024px) {
+        .different-products .hover-box .hover-content p {
+          font-size: 1.4em; } }
       @media (max-width: 375px) {
         .different-products .hover-box .hover-content p {
           padding: 5px 0; } }
@@ -1439,7 +1445,13 @@ label.error {
       margin: 0 auto; }
 
 .different-products .no-gutters {
-  padding-right: 10px; }
+  margin-top: 0px; }
+  .different-products .no-gutters:nth-of-type(2), .different-products .no-gutters:nth-of-type(4) {
+    margin-left: -5px; }
+  @media (max-width: 767px) {
+    .different-products .no-gutters {
+      margin-top: 0;
+      margin-left: -5px; } }
 
 .promotional-ad .btn {
   position: absolute;
