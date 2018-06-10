@@ -12,6 +12,10 @@
                 </a>
             </li>
             <li><a href="javascript:document.getElementById('logoutForm').submit()" data-toggle="tooltip" title="Log Out"><span class="glyphicon glyphicon-log-out"></span></a></li>
+            if (User.IsInRole("Admin"))
+            {
+                <li><a href="@Url.Action("Index", "Admin")" id="registerLink" data-toggle="tooltip" title="Admin"><span class="glyphicon glyphicon-cog"></span></a></li>
+            }
         }
     }
     else

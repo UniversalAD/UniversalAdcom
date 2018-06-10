@@ -21,79 +21,192 @@
     </div>
 </section>
 
-<section class="different-products m-top-25 m-bottom-25">
-    <div class="row row-max">
-        <div class="col-xs-11 col-lg-11 center-block">
-            <h2>Popular Products</h2>
-            <div class="col-sm-6 col-md-3 col-lg-3 m-bottom-25 no-gutters">
-                <div class="hover-box" data-target="#maps">
-                    <img src="@Url.Content("http://via.placeholder.com/275x275")" class="img-responsive" />
-                    <div class="hover-content" id="maps">
-                        <h4 class="text-center">Magnets & Maps</h4>
-                        <p class="text-center">Make an impression that sticks and directs customers to your brand on a daily basis!</p>
-                        <a href="#" class="btn btn-default red">View More</a>
+<div ng-app="prodDesc">
+    <div ng-controller="prodDescController">
+        <section class="different-products m-top-25 m-bottom-25">
+            <div class="row row-max">
+                <div class="col-xs-11 col-lg-11 center-block">
+                    <h2>Popular Products</h2>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6 no-gutters">
+                            <div class="hover-box" data-target="#magnets">
+                                <img src="@Url.Content("/Content/Images/Products/Magnets.png")" class="img-responsive" />
+                                <div class="hover-content" id="magnets">
+                                    <h4 class="text-center">Magnets</h4>
+                                    <p class="text-center">Make an impression that sticks and directs customers to your brand on a daily basis!</p>
+                                    <a data-target="#productDesc" data-toggle="modal" ng-click="kitchen()" class="btn btn-default red">View More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6 no-gutters">
+                            <div class="hover-box" data-target="#maps">
+                                <img src="@Url.Content("/Content/Images/Products/Maps.png")" class="img-responsive" />
+                                <div class="hover-content" id="maps">
+                                    <h4 class="text-center">Maps</h4>
+                                    <p class="text-center">Our county maps feature high detailed prints with all of your cities details highlighted.</p>
+                                    <a data-target="#productDesc" data-toggle="modal" ng-click="maps()" class="btn btn-default red">View More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6 no-gutters">
+                            <div class="hover-box" data-target="#bags">
+                                <img src="@Url.Content("/Content/Images/Products/Totes.png")" class="img-responsive" />
+                                <div class="hover-content" id="bags">
+                                    <h4 class="text-center">Bags</h4>
+                                    <p class="text-center">Carry your referral business to the next level with these awesome eco-friendly totes. </p>
+                                    <a data-target="#productDesc" data-toggle="modal" ng-click="totes()" class="btn btn-default red">View More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6 no-gutters">
+                            <div class="hover-box" data-target="#drinkware">
+                                <img src="@Url.Content("/Content/Images/Products/Cups.png")" class="img-responsive" />
+                                <div class="hover-content" id="drinkware">
+                                    <h4 class="text-center">Cups</h4>
+                                    <p class="text-center">Keep your brand cool and hydrate your business with these awesome products.</p>
+                                    <a data-target="#productDesc" data-toggle="modal" ng-click="cups()" class="btn btn-default red">View More</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-3 col-lg-3 m-bottom-25 no-gutters">
-                <div class="hover-box" data-target="#apparel">
-                    <img src="@Url.Content("http://via.placeholder.com/275x275")" class="img-responsive" />
-                    <div class="hover-content" id="apparel">
-                        <h4 class="text-center">Apparel</h4>
-                        <p class="text-center">Deck your business out in the most comfortable form of advertising out there!</p>
-                        <a href="#" class="btn btn-default red">View More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3 m-bottom-25 no-gutters">
-                <div class="hover-box" data-target="#bags">
-                    <img src="@Url.Content("http://via.placeholder.com/275x275")" class="img-responsive" />
-                    <div class="hover-content" id="bags">
-                        <h4 class="text-center">Bags</h4>
-                        <p class="text-center">Carry your referral business to the next level with these awesome eco-friendly totes. </p>
-                        <a href="#" class="btn btn-default red">View More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3 m-bottom-25 no-gutters">
-                <div class="hover-box" data-target="#drinkware">
-                    <img src="@Url.Content("http://via.placeholder.com/275x275")" class="img-responsive" />
-                    <div class="hover-content" id="drinkware">
-                        <h4 class="text-center">Drinkware</h4>
-                        <p class="text-center">Keep your brand cool and hydrate your business with these awesome products.</p>
-                        <a href="#" class="btn btn-default red">View More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section class="promotional-ad">
+        <section class="prodDesc m-top-50">
+            <div class="row row-max">
+                <div class="col-lg-11 center-block">
+                    <div class="product-slick">
+                        <div class="prod-hover" data-target="#prod-calendar">
+                            <img src="@Url.Content("/Content/Images/Products/Items/prod-calendar.png")" class="img-responsive" />
+                            <div class="prod-content" id="prod-calendar">
+                                <h4 class="text-center">Calendar Magnets</h4>
+                                <p class="text-center">
+                                    Perfect for the entire years and a great way to remind customers of your 2018-19 sales you have going on! <b>Let Us Design Your Ad For $0!</b>
+                                </p>
+                                <a data-target="#productDesc" data-toggle="modal" ng-click="calendar()" class="btn btn-default red center-block">Learn More</a>
+                            </div>
+                        </div>
+
+                        <div class="prod-hover" data-target="#prod-bag">
+                            <img src="@Url.Content("/Content/Images/Products/Items/prod-bag.png")" class="img-responsive" />
+                            <div class="prod-content" id="prod-bag">
+                                <h4 class="text-center">Drawstring Bags</h4>
+                                <p class="text-center">Use them for those nasty clears or for the perfect sleepover bag for the kids. These are great for sports and fun days out.</p>
+                                <a data-target="#productDesc" data-toggle="modal" ng-click="bags()" class="btn btne-default red center-block">Learn More</a>
+                            </div>
+                        </div>
+
+                        <div class="prod-hover" data-target="#prod-cup">
+                            <img src="@Url.Content("/Content/Images/Products/Items/prod-cup.png")" class="img-responsive" />
+                            <div class="prod-content" id="prod-cup">
+                                <h4 class="text-center">Cups</h4>
+                                <p class="text-center">Don't let your brand die of thirst. Replenish your customers now! <b>Get Your Free Ad Design Today.</b></p>
+                                <a data-target="#productDesc" data-toggle="modal" ng-click="cups()" class="btn btn-default red center-block">Learn More</a>
+                            </div>
+                        </div>
+
+                        <div class="prod-hover" data-target="#prod-koosie">
+                            <img src="@Url.Content("/Content/Images/Products/Items/prod-koosie.png")" class="img-responsive" />
+                            <div class="prod-content" id="prod-koosie">
+                                <h4 class="text-center">Kan Koolers</h4>
+                                <p class="text-center">Keep ypur brand cool and never let your advertising dry out!</p>
+                                <a data-target="#productDesc" data-toggle="modal" ng-click="koosie()" class="btn btn-default red center-block">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="prod-hover" data-target="#prod-map">
+                            <img src="@Url.Content("/Content/Images/Products/Items/prod-map.png")" class="img-responsive" />
+                            <div class="prod-content" id="prod-map">
+                                <h4 class="text-center">Maps</h4>
+                                <p class="text-center">Give Customers an easier way to find you today!</p>
+                                <a data-target="#productDesc" data-toggle="modal" ng-click="maps()" class="btn btn-default red center-block">Learn More</a>
+                            </div>
+                        </div>
+
+                        <div class="prod-hover" data-target="#prod-shirt">
+                            <img src="@Url.Content("/Content/Images/Products/Items/prod-shirt.png")" class="img-responsive" />
+                            <div class="prod-content" id="prod-shirt">
+                                <h4 class="text-center">Shirts</h4>
+                                <p class="text-center">For Company events, employees, or build your brand as customer giveaways <b>Get Your Free Mock-Up Now.</b></p>
+                                <a data-target="#productDesc" data-toggle="modal" ng-click="shirts()" class="btn btn-default red center-block">Learn More</a>
+                            </div>
+                        </div>
+
+                        <div class="prod-hover" data-target="#prod-kitchen">
+                            <img src="@Url.Content("/Content/Images/Products/Items/prod-kitchen.png")" class="img-responsive" />
+                            <div class="prod-content" id="prod-kitchen">
+                                <h4 class="text-center">Kitchen Magnets</h4>
+                                <p class="text-center">
+                                    These are perfect for every kitchen. I use mine at least once a week.<b>Get Your Free Ad Design!</b>
+                                </p>
+                                <a data-target="#productDesc" data-toggle="modal" ng-click="kitchen()" class="btn btn-default red center-block">Learn More</a>
+                            </div>
+                        </div>
+
+                        <div class="prod-hover" data-target="#prod-sport">
+                            <img src="@Url.Content("/Content/Images/Products/Items/prod-sport.png")" class="img-responsive" />
+                            <div class="prod-content" id="prod-sport">
+                                <h4 class="text-center">Sports Bottles</h4>
+                                <p class="text-center">Are perfect for practice, games and maybe even a little wine every once in a while form mom and/or dad. <b>Free</b></p>
+                                <a data-target="#productDesc" data-toggle="modal" ng-click="sport()" class="btn btn-default red center-block">Learn More</a>
+                            </div>
+                        </div>
+
+                        <div class="prod-hover" data-target="#prod-schedule">
+                            <img src="@Url.Content("/Content/Images/Products/Items/prod-sport-schedule.png")" class="img-responsive" />
+                            <div class="prod-content" id="prod-schedule">
+                                <h4 class="text-center">Schedule Magnets</h4>
+                                <p class="text-center">
+                                    Keep up to date with your local sports and allow your customers to plan a fun night out with the family.
+                                </p>
+                                <a data-target="#productDesc" data-toggle="modal" ng-click="schedule()" class="btn btn-default red center-block">Learn More</a>
+                            </div>
+                        </div>
+
+                        <div class="prod-hover" data-target="#prod-tote">
+                            <img src="@Url.Content("/Content/Images/Products/Items/prod-tote.png")" class="img-responsive" />
+                            <div class="prod-content" id="prod-tote">
+                                <h4 class="text-center">Tote Bags</h4>
+                                <p class="text-center">
+                                    Actually give customers something they'll keep and use for years to come! <b>We'll Design Your's For Free!</b>'
+                                </p>
+                                <a data-target="#productDesc" data-toggle="modal" ng-click="totes()" class="btn btn-default red center-block">Learn More</a>
+                            </div>
+                        </div>
+
+                        <div class="prod-hover" data-target="#prod-emergency">
+                            <img src="@Url.Content("/Content/Images/Products/Items/prod-emergency.png")" class="img-responsive" />
+                            <div class="prod-content" id="prod-emergency">
+                                <h4 class="text-center">Emergency Magnets</h4>
+                                <p class="text-center">
+                                    These magnets are some of our best sellers and feature life saving information that's easier to find than waiting for the Internet to load.
+                                </p>
+                                <a data-target="#productDesc" data-toggle="modal" ng-click="emergency()" class="btn btn-default red center-block">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @Html.Partial("_ProductDescPartial")
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+<section class="promo">
     <div class="row row-max">
         <div class="col-xs-12 col-lg-11 center-block">
-            <img src="@Url.Content("http://via.placeholder.com/2100x125")" class="img-responsive" />
-            <div class="row relative m-top-25">
-                <img src="@Url.Content("http://via.placeholder.com/2100x600")" class="img-responsive" />
-                <button type="button" class="btn btn-default">Button</button>
+            <h3 class="text-center">MORE TO EXPLORE</h3>
+            <div class="promotional-ad">
+                <div><img src="@Url.Content("/Content/Images/Products/maps-slide.png")" class="img-responsive" /></div>
+                <div><img src="@Url.Content("/Content/Images/Products/shirts-slide.png")" class="img-responsive" /></div>
+                <div><img src="@Url.Content("/Content/Images/Products/totes-slide.png")" class="img-responsive" /></div>
+                <div><img src="@Url.Content("/Content/Images/Products/koosie-slide.png")" class="img-responsive" /></div>
             </div>
         </div>
-    </div>
-</section>
-
-<section class="prodDesc m-top-50" ng-app="prodDesc">
-    <div class="row row-max" ng-controller="prodDescController">
-        <div class="col-lg-11 center-block">
-            <div class="product-slick">
-                <div data-target="#productDesc" data-toggle="modal" ng-click="magnets()"><img src="@Url.Content("http://via.placeholder.com/300x300")" class="img-responsive" /></div>
-                <div data-target="#productDesc" data-toggle="modal" ng-click="totes()"><img src="@Url.Content("http://via.placeholder.com/300x300")" class="img-responsive" /></div>
-                <div data-target="#productDesc" data-toggle="modal" ng-click="cups()"><img src="@Url.Content("http://via.placeholder.com/300x300")" class="img-responsive" /></div>
-                <div data-target="#productDesc" data-toggle="modal" ng-click="shirts()"><img src="@Url.Content("http://via.placeholder.com/300x300")" class="img-responsive" /></div>
-                <div data-target="#productDesc" data-toggle="modal" ng-click="koosie()"><img src="@Url.Content("http://via.placeholder.com/300x300")" class="img-responsive" /></div>
-                <div data-target="#productDesc" data-toggle="modal" ng-click="backpacks()"><img src="@Url.Content("http://via.placeholder.com/300x300")" class="img-responsive" /></div>
-            </div>
-        </div>       
-        @Html.Partial("_ProductDescPartial")
     </div>
 </section>
 
@@ -109,7 +222,7 @@
             infinite: true,
             speed: 300,
             slidesToShow: 4,
-            slidesToScroll: 1,
+            slidesToScroll: 4,
             responsive: [
                 {
                     breakpoint: 1024,
@@ -133,7 +246,7 @@
                         slidesToShow: 1,
                         slidesToScroll: 1
                     }
-                }             
+                }
             ]
         });
     </script>
@@ -141,6 +254,17 @@
     <script>
         $(".thumb").click(function () {
 
+        });
+    </script>
+
+    <script>
+        $('.promotional-ad').slick({
+            dots: false,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            slidesToShow: 1,
+            slidesToScroll: 1
         });
     </script>
 }
