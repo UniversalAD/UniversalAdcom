@@ -2,7 +2,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">product</h4>
+                <h4 class="modal-title">Product</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
@@ -14,16 +14,11 @@
                             <img id="thumbOne" ng-src="{{product.thumb_one}}" class="img-responsive thumb" ng-click="thumbOneSwap($event)" />
                         </div>
                         <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 no-gutters"><img id="thumbTwo" ng-src="{{product.thumb_two }}" class="img-responsive thumb" ng-click="thumbOneSwap($event)" /></div>
-                        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 no-gutters"><img ng-src="{{ product.thumb_three }}" class="img-responsive thumb" /></div>
+                        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 no-gutters"><img id="thumbThree" ng-src="{{product.print }}" class="img-responsive thumb" ng-click="thumbOneSwap($event)" /></div>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <h5>{{ product.heading }}</h5>
-                        <p>Description: <br /> {{ product.desc }}</p>
-                        <p>Print Area: <br />{{ product.printarea }}</p>
-                        <p>
-                            Color: <br />
-                            {{ product.color }}
-                        </p>
+                        <p><b>Description:</b> <br /> {{ product.desc }}</p>                       
                     </div>
                 </div>
             </div>

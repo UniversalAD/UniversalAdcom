@@ -6,7 +6,11 @@
         max-width: 1024px;
 
         .close {
-            margin-top: -30px;
+            margin-top: -70px;
+        }
+
+        .modal-title {
+            font-size: 3em;
         }
     }
 
@@ -17,8 +21,16 @@
         }
 
         h5 {
-            font-size: 22px;
+            font-size: 2em;
             border-bottom: solid 1px #d4d4d4;
+        }
+
+        p {
+            font-size: 1.2em;
+
+            b {
+                font-size: 1.3em;
+            }
         }
 
         .product-img-container {
