@@ -49,8 +49,8 @@ app.controller('prodDescController', function ($scope) {
 
     $scope.totes = function () {
         $scope.product = {
-            heading: "Tote Bags",
-            desc: 'Pick up your referral business with these awesome customer keepers. When you freely give customers something they\'ll need.. something that they\'ll absolutely use.. you give them a reason to keep you in mind. BE MEMORABLE NOW.',           
+            heading: "Our Awesome Bags",
+            desc: 'Partner with us and our incredible distributors today and pick up your referral business with these awesome customer keepers. When you are a part of such a wonderful program and give your customers something they’ll need and absolutely use, you give them a reason to keep coming back to you. BE MEMORABLE NOW!',           
             mainImg: "/Content/Images/Products/Desc/TOTE.png",
             thumb_one: "http://via.placeholder.com/450x350",
             thumb_two: "/Content/Images/Products/Desc/TOTE2.png",
@@ -60,7 +60,7 @@ app.controller('prodDescController', function ($scope) {
     $scope.cups = function () {
         $scope.product = {
             heading: "Cups",
-            desc: "Hydrate you brand with these thirst quenchers. We aim to make your competition thirsty, not your customers. Think about it, concession cups with your name on it, full of coffee or water, given freely to your customers that are waiting.. my goodness, that goes a long way. Especially, when you tell them they get to keep the cup. DRINK IN THE MOMENT.",            
+            desc: "Hydrate your brand with these thirst quenchers. Distributed by your local schools and events, we aim to make your competition thirsty, not your customers! Drink in this wonderful opportunity today!",            
             mainImg: "/Content/Images/Products/Desc/Cups.png",
             thumb_one: "/Content/Images/Products/Desc/Concession-Cup--.jpg",
             thumb_two: "/Content/Images/Products/Desc/Concession-Cup--2.png",
@@ -70,7 +70,7 @@ app.controller('prodDescController', function ($scope) {
     $scope.sport = function () {
         $scope.product = {
             heading: "Sports Bottles",
-            desc: "Hydrate you brand with these thirst quenchers. We aim to make your competition thirsty, not your customers. Think about it, concession cups with your name on it, full of coffee or water, given freely to your customers that are waiting.. my goodness, that goes a long way. Especially, when you tell them they get to keep the cup. DRINK IN THE MOMENT.",
+            desc: "Hydrate your brand with these thirst quenchers. Distributed by your local schools and events, we aim to make your competition thirsty, not your customers! Drink in this wonderful opportunity today!",
             mainImg: "/Content/Images/Products/Desc/Sports-Bottle.png",
             thumb_one: "/Content/Images/Products/Desc/KOOZIE-3.png",
             thumb_two: "http://via.placeholder.com/450x350",
@@ -80,7 +80,7 @@ app.controller('prodDescController', function ($scope) {
     $scope.shirts = function () {
         $scope.product = {
             heading: "Advertising You Can Wear",
-            desc: 'Bring you business to life and authenticate yourself as a player in the game. Someone once said, "You\'re not a real business until you have your own t-shirt". That makes a lot of sense to us. Let us put you business\'s artwork together for free today.',
+            desc: 'Bring your business to life and authenticate yourself as a player in the game. Someone once said, “You’re not a real business until you have your own t-shirt.” That makes a lot of sense to us… especially when they’re distributed by our amazing school, radio and event partners across the country. Let us put your business’s artwork together for free today!',
             mainImg: "/Content/Images/Products/Desc/Shirt.png",
             thumb_one: "/Content/Images/Products/Desc/Shirt.1.png",
             thumb_two: "http://via.placeholder.com/450x350",
@@ -90,7 +90,7 @@ app.controller('prodDescController', function ($scope) {
     $scope.koosie = function () {
         $scope.product = {
             heading: "Kan Koolers",
-            desc: "Hydrate you brand with these thirst quenchers. We aim to make your competition thirsty, not your customers. Think about it, concession cups with your name on it, full of coffee or water, given freely to your customers that are waiting.. my goodness, that goes a long way. Especially, when you tell them they get to keep the cup. DRINK IN THE MOMENT.",
+            desc: "Hydrate your brand with these thirst quenchers. Distributed by your local schools and events, we aim to make your competition thirsty, not your customers! Drink in this wonderful opportunity today!",
             mainImg: "/Content/Images/Products/Desc/KOOZIE.png",
             thumb_one: "/Content/Images/Products/Desc/KOOZIE-2.png",
             thumb_two: "http://via.placeholder.com/450x350",
@@ -99,8 +99,8 @@ app.controller('prodDescController', function ($scope) {
     }
     $scope.bags = function () {
         $scope.product = {
-            heading: "Drawstring Bags",
-            desc: "Pick up your referral business with these awesome customer keepers. When you freely give customers something they\'ll need.. something that they\'ll absolutely use.. you give them a reason to keep you in mind. BE MEMORABLE NOW.",
+            heading: "Our Awesome Bags",
+            desc: "Partner with us and our incredible distributors today and pick up your referral business with these awesome customer keepers. When you are a part of such a wonderful program and give your customers something they’ll need and absolutely use, you give them a reason to keep coming back to you. BE MEMORABLE NOW!",
             mainImg: "/Content/Images/Products/Desc/drawstring-2.png",
             thumb_one: "/Content/Images/Products/Desc/drawstring-3.png",
             thumb_two: "",
